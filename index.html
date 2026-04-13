@@ -247,148 +247,93 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 4: THE DATA ==================== -->
-<div class="slide slide-top" data-slide="4" id="data-viz-slide" style="padding-top:5vh;padding-bottom:3vh">
-<div class="stagger">
+<div class="slide slide-top" data-slide="4" id="data-viz-slide" style="padding-top:5vh;padding-bottom:2vh">
+<div style="display:flex;align-items:flex-start;gap:1vw">
+<!-- HEADER + STATS LEFT COLUMN -->
+<div style="flex-shrink:0;width:14vw;display:flex;flex-direction:column;gap:1.5vh">
+<div>
 <p class="label coral">OVERVIEW</p>
 <div class="gap-sm"></div>
-<h2>the data</h2>
-<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:1vh;max-width:none;white-space:nowrap">Here's what AIDSVu tells us.</p>
+<h2 style="font-size:clamp(2.2rem,4vw,4rem)">the data</h2>
+<p style="font-size:0.85rem;color:var(--muted);margin-top:0.5vh;white-space:nowrap">Here's what AIDSVu tells us.</p>
 </div>
-<div class="gap"></div>
-
-<!-- ROW 1: Three big animated stat cards -->
-<div class="g3" style="gap:2vw;margin-bottom:2vh">
-<div class="card-sm anim-card" style="text-align:center;border-top:3px solid var(--orange);position:relative;overflow:hidden">
-<div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--coral));"></div>
-<p class="anim-num" data-target="1130000" style="font-family:'Anton',sans-serif;font-size:clamp(2.8rem,4.5vw,4.5rem);color:var(--text);line-height:1">1.13M</p>
-<p style="font-size:0.78rem;color:var(--dim);margin-top:0.5vh;text-transform:uppercase;letter-spacing:0.1em">living with HIV</p>
+<!-- Stacked stat cards -->
+<div class="anim-card" style="background:var(--surface-light);border:1px solid var(--border);border-radius:10px;padding:1.2vw 1.4vw;border-left:3px solid var(--orange)">
+<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--text);line-height:1">1.13M</p>
+<p style="font-size:0.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">living with HIV</p>
 </div>
-<div class="card-sm anim-card" style="text-align:center;border-top:3px solid var(--orange);position:relative">
-<p class="anim-num" style="font-family:'Anton',sans-serif;font-size:clamp(2.8rem,4.5vw,4.5rem);color:var(--text);line-height:1;animation-delay:300ms">39,182</p>
-<p style="font-size:0.78rem;color:var(--dim);margin-top:0.5vh;text-transform:uppercase;letter-spacing:0.1em">new diagnoses in 2023</p>
+<div class="anim-card" style="background:var(--surface-light);border:1px solid var(--border);border-radius:10px;padding:1.2vw 1.4vw;border-left:3px solid var(--orange)">
+<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--text);line-height:1">39,182</p>
+<p style="font-size:0.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">new diagnoses, 2023</p>
 </div>
-<div class="card-sm anim-card" style="text-align:center;border-top:3px solid var(--teal);position:relative">
-<p class="anim-num" style="font-family:'Anton',sans-serif;font-size:clamp(2.8rem,4.5vw,4.5rem);color:var(--teal);line-height:1;animation-delay:600ms">505,993</p>
-<p style="font-size:0.78rem;color:var(--dim);margin-top:0.5vh;text-transform:uppercase;letter-spacing:0.1em">on PrEP nationally</p>
+<div class="anim-card" style="background:var(--surface-light);border:1px solid var(--border);border-radius:10px;padding:1.2vw 1.4vw;border-left:3px solid var(--teal)">
+<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--teal);line-height:1">505,993</p>
+<p style="font-size:0.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">on PrEP nationally</p>
 </div>
 </div>
 
-<!-- ROW 2: Bar chart + Donut + Disparity bars -->
-<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:2vw;align-items:start">
-
-<!-- LEFT: Animated horizontal bar chart — new DX by state -->
-<div>
-<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:1.2vh">New diagnosis rate by state (per 100K)</p>
-<div style="display:flex;flex-direction:column;gap:0.7vh">
-<div style="display:flex;align-items:center;gap:1vw">
-<p style="font-size:0.78rem;color:var(--text);font-weight:600;width:6vw;text-align:right;flex-shrink:0">D.C.</p>
-<div style="flex:1;height:22px;background:rgba(76,48,13,0.04);border-radius:4px;overflow:hidden"><div class="anim-bar" style="--bar-w:100%;height:100%;background:linear-gradient(90deg,var(--orange),var(--coral));border-radius:4px"></div></div>
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--orange);width:2.5vw;font-weight:600">33</p>
-</div>
-<div style="display:flex;align-items:center;gap:1vw">
-<p style="font-size:0.78rem;color:var(--muted);width:6vw;text-align:right;flex-shrink:0">Georgia</p>
-<div style="flex:1;height:22px;background:rgba(76,48,13,0.04);border-radius:4px;overflow:hidden"><div class="anim-bar" style="--bar-w:79%;height:100%;background:var(--orange);border-radius:4px;opacity:0.8"></div></div>
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--dim);width:2.5vw">26</p>
-</div>
-<div style="display:flex;align-items:center;gap:1vw">
-<p style="font-size:0.78rem;color:var(--muted);width:6vw;text-align:right;flex-shrink:0">Florida</p>
-<div style="flex:1;height:22px;background:rgba(76,48,13,0.04);border-radius:4px;overflow:hidden"><div class="anim-bar" style="--bar-w:70%;height:100%;background:var(--orange);border-radius:4px;opacity:0.65"></div></div>
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--dim);width:2.5vw">23</p>
-</div>
-<div style="display:flex;align-items:center;gap:1vw">
-<p style="font-size:0.78rem;color:var(--muted);width:6vw;text-align:right;flex-shrink:0">Louisiana</p>
-<div style="flex:1;height:22px;background:rgba(76,48,13,0.04);border-radius:4px;overflow:hidden"><div class="anim-bar" style="--bar-w:70%;height:100%;background:var(--orange);border-radius:4px;opacity:0.55"></div></div>
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--dim);width:2.5vw">23</p>
-</div>
-<div style="display:flex;align-items:center;gap:1vw">
-<p style="font-size:0.78rem;color:var(--muted);width:6vw;text-align:right;flex-shrink:0">Mississippi</p>
-<div style="flex:1;height:22px;background:rgba(76,48,13,0.04);border-radius:4px;overflow:hidden"><div class="anim-bar" style="--bar-w:64%;height:100%;background:var(--orange);border-radius:4px;opacity:0.45"></div></div>
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--dim);width:2.5vw">21</p>
-</div>
-</div>
-</div>
-
-<!-- CENTER: Donut chart — PrEP coverage gap -->
-<div style="text-align:center;padding:0 1.5vw">
-<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:1.2vh">The PrEP gap</p>
-<div style="position:relative;width:140px;height:140px;margin:0 auto">
+<!-- CENTER: Donut -->
+<div style="flex-shrink:0;width:14vw;display:flex;flex-direction:column;align-items:center;padding-top:8vh">
+<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:1vh">The PrEP gap</p>
+<div style="position:relative;width:160px;height:160px">
 <svg viewBox="0 0 120 120" style="width:100%;height:100%;transform:rotate(-90deg)">
-<circle cx="60" cy="60" r="52" fill="none" stroke="rgba(76,48,13,0.06)" stroke-width="12"/>
-<circle cx="60" cy="60" r="52" fill="none" stroke="var(--orange)" stroke-width="12" stroke-linecap="round"
-  class="anim-ring" style="--ring-circ:327;--ring-offset:214;stroke-dasharray:327;stroke-dashoffset:327"/>
-<circle cx="60" cy="60" r="52" fill="none" stroke="var(--teal)" stroke-width="12" stroke-linecap="round"
-  class="anim-ring" style="--ring-circ:327;--ring-offset:295;stroke-dasharray:327;stroke-dashoffset:327;animation-delay:400ms"/>
+<circle cx="60" cy="60" r="52" fill="none" stroke="rgba(76,48,13,0.06)" stroke-width="14"/>
+<circle cx="60" cy="60" r="52" fill="none" stroke="var(--orange)" stroke-width="14" stroke-linecap="round" class="anim-ring" style="--ring-circ:327;--ring-offset:214;stroke-dasharray:327;stroke-dashoffset:327"/>
+<circle cx="60" cy="60" r="52" fill="none" stroke="var(--teal)" stroke-width="14" stroke-linecap="round" class="anim-ring" style="--ring-circ:327;--ring-offset:295;stroke-dasharray:327;stroke-dashoffset:327;animation-delay:400ms"/>
 </svg>
 <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
-<p style="font-family:'Anton',sans-serif;font-size:1.6rem;color:var(--text);line-height:1">3:1</p>
-<p style="font-size:0.62rem;color:var(--dim);margin-top:2px">DIAGNOSES<br>TO PREP</p>
+<p style="font-family:'Anton',sans-serif;font-size:2rem;color:var(--text);line-height:1">3:1</p>
+<p style="font-size:0.58rem;color:var(--dim);margin-top:2px">DIAGNOSES<br>TO PREP</p>
 </div>
 </div>
-<div style="display:flex;justify-content:center;gap:1.2vw;margin-top:1vh">
-<div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--orange)"></div><p style="font-size:0.68rem;color:var(--dim)">HIV</p></div>
-<div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--teal)"></div><p style="font-size:0.68rem;color:var(--dim)">PrEP</p></div>
+<div style="display:flex;gap:1vw;margin-top:1vh">
+<div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--orange)"></div><p style="font-size:0.65rem;color:var(--dim)">HIV</p></div>
+<div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--teal)"></div><p style="font-size:0.65rem;color:var(--dim)">PrEP</p></div>
+</div>
+<p style="font-size:0.72rem;color:var(--dim);margin-top:1.5vh;text-align:center;line-height:1.4;max-width:14vw">For every person on PrEP, three are diagnosed without it.</p>
+</div>
+
+<!-- RIGHT: 3 bar charts stacked -->
+<div style="flex:1;display:flex;flex-direction:column;gap:2vh;min-width:0">
+
+<!-- BAR CHART 1: NYC Boroughs -->
+<div>
+<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.8vh">NYC boroughs (per 100K)</p>
+<div style="display:flex;flex-direction:column;gap:0.5vh">
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--text);font-weight:600;width:5.5vw;text-align:right;flex-shrink:0">Bronx</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:100%;height:100%;background:linear-gradient(90deg,var(--orange),var(--coral));border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange);width:3vw;font-weight:600">2,438</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Manhattan</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:73%;height:100%;background:var(--orange);border-radius:3px;opacity:0.8"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">1,785</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Brooklyn</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:50%;height:100%;background:var(--orange);border-radius:3px;opacity:0.65"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">1,225</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Queens</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:36%;height:100%;background:var(--orange);border-radius:3px;opacity:0.5"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">871</p></div>
 </div>
 </div>
 
-<!-- RIGHT: Racial disparity — comparative bars -->
+<!-- BAR CHART 2: LA County -->
 <div>
-<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:1.2vh">Black vs. White prevalence (per 100K)</p>
-<div style="display:flex;flex-direction:column;gap:1.2vh">
-<!-- Maryland -->
+<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.8vh">LA County</p>
+<div style="display:flex;flex-direction:column;gap:0.5vh">
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--text);font-weight:600;width:5.5vw;text-align:right;flex-shrink:0">Prevalence</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:85%;height:100%;background:var(--orange);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange);width:3vw;font-weight:600">622</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">PrEP</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:44%;height:100%;background:var(--teal);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--teal);width:3vw">323</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">New DX</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:3%;height:100%;background:var(--coral);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">20</p></div>
+</div>
+<p style="font-size:0.62rem;color:var(--dim);margin-top:0.4vh">51,652 people living with HIV. 26,862 on PrEP. 1,627 new diagnoses.</p>
+</div>
+
+<!-- BAR CHART 3: Prevalence gap by state -->
 <div>
-<div style="display:flex;justify-content:space-between;margin-bottom:0.3vh"><p style="font-size:0.78rem;font-weight:600;color:var(--text)">Maryland</p><p style="font-size:0.72rem;font-weight:700;color:var(--coral)">9.8x</p></div>
-<div style="display:flex;gap:4px;align-items:center">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:79%;height:100%;background:var(--orange);border-radius:3px"></div></div>
-<p style="font-size:0.65rem;color:var(--orange);width:3vw;font-family:'JetBrains Mono',monospace">1,521</p>
-</div>
-<div style="display:flex;gap:4px;align-items:center;margin-top:2px">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:8%;height:100%;background:var(--dim);border-radius:3px;opacity:0.4"></div></div>
-<p style="font-size:0.65rem;color:var(--dim);width:3vw;font-family:'JetBrains Mono',monospace">155</p>
-</div>
-</div>
-<!-- New York -->
-<div>
-<div style="display:flex;justify-content:space-between;margin-bottom:0.3vh"><p style="font-size:0.78rem;font-weight:600;color:var(--text)">New York</p><p style="font-size:0.72rem;font-weight:700;color:var(--coral)">8.3x</p></div>
-<div style="display:flex;gap:4px;align-items:center">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:100%;height:100%;background:var(--orange);border-radius:3px"></div></div>
-<p style="font-size:0.65rem;color:var(--orange);width:3vw;font-family:'JetBrains Mono',monospace">1,914</p>
-</div>
-<div style="display:flex;gap:4px;align-items:center;margin-top:2px">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:12%;height:100%;background:var(--dim);border-radius:3px;opacity:0.4"></div></div>
-<p style="font-size:0.65rem;color:var(--dim);width:3vw;font-family:'JetBrains Mono',monospace">230</p>
-</div>
-</div>
-<!-- Georgia -->
-<div>
-<div style="display:flex;justify-content:space-between;margin-bottom:0.3vh"><p style="font-size:0.78rem;font-weight:600;color:var(--text)">Georgia</p><p style="font-size:0.72rem;font-weight:700;color:var(--coral)">6.8x</p></div>
-<div style="display:flex;gap:4px;align-items:center">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:74%;height:100%;background:var(--orange);border-radius:3px"></div></div>
-<p style="font-size:0.65rem;color:var(--orange);width:3vw;font-family:'JetBrains Mono',monospace">1,413</p>
-</div>
-<div style="display:flex;gap:4px;align-items:center;margin-top:2px">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:11%;height:100%;background:var(--dim);border-radius:3px;opacity:0.4"></div></div>
-<p style="font-size:0.65rem;color:var(--dim);width:3vw;font-family:'JetBrains Mono',monospace">207</p>
-</div>
-</div>
-<!-- Florida -->
-<div>
-<div style="display:flex;justify-content:space-between;margin-bottom:0.3vh"><p style="font-size:0.78rem;font-weight:600;color:var(--text)">Florida</p><p style="font-size:0.72rem;font-weight:700;color:var(--coral)">6.0x</p></div>
-<div style="display:flex;gap:4px;align-items:center">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:94%;height:100%;background:var(--orange);border-radius:3px"></div></div>
-<p style="font-size:0.65rem;color:var(--orange);width:3vw;font-family:'JetBrains Mono',monospace">1,805</p>
-</div>
-<div style="display:flex;gap:4px;align-items:center;margin-top:2px">
-<div style="flex:1;height:14px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:16%;height:100%;background:var(--dim);border-radius:3px;opacity:0.4"></div></div>
-<p style="font-size:0.65rem;color:var(--dim);width:3vw;font-family:'JetBrains Mono',monospace">302</p>
-</div>
-</div>
+<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.8vh">State prevalence rate (per 100K)</p>
+<div style="display:flex;flex-direction:column;gap:0.5vh">
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--text);font-weight:600;width:5.5vw;text-align:right;flex-shrink:0">D.C.</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:100%;height:100%;background:linear-gradient(90deg,var(--orange),var(--coral));border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange);width:3vw;font-weight:600">2,286</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">New York</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:33%;height:100%;background:var(--orange);border-radius:3px;opacity:0.8"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">753</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Georgia</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:29%;height:100%;background:var(--orange);border-radius:3px;opacity:0.7"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">667</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Maryland</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:28%;height:100%;background:var(--orange);border-radius:3px;opacity:0.6"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">651</p></div>
+<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Florida</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:28%;height:100%;background:var(--orange);border-radius:3px;opacity:0.5"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">631</p></div>
 </div>
 </div>
 
 </div>
-
-<div style="height:1px;background:rgba(76,48,13,0.1);margin:1.5vh 0 1vh"></div>
-<p style="font-size:0.78rem;color:var(--dim)">AIDSVu / Emory University, 2023. All county and state level.</p>
+</div>
+<div style="height:1px;background:rgba(76,48,13,0.1);margin:1vh 0 0.5vh"></div>
+<p style="font-size:0.72rem;color:var(--dim)">AIDSVu / Emory University, 2023. All county and state level.</p>
 </div>
 
 <!-- ==================== SLIDE 5: THE USER FLOW ==================== -->
