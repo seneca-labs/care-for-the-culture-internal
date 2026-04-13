@@ -9,7 +9,7 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
 --bg:#EEEAD9;--surface:#F0DEC9;--surface-light:#F5F1E6;--text:#4C300D;--muted:#7A5C3A;--dim:#9A8264;
---coral:#B53324;--teal:#7CB518;--lime:#CDFA3A;--amber:#F6B664;--pink:#9F3826;--skin:#D5B48D;
+--coral:#B53324;--teal:#7CB518;--lime:#CDFA3A;--amber:#F6B664;--orange:#E8853A;--pink:#9F3826;--skin:#D5B48D;
 --green:#C8FF00;--darkbrown:#3C2400;--midbrown:#5A3500;
 --border:rgba(76,48,13,0.08);
 }
@@ -29,7 +29,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 .small{font-size:clamp(1rem,1.2vw,1.2rem);line-height:1.65;color:var(--dim);max-width:46ch}
 .mono{font-family:'JetBrains Mono',monospace}
 .label{font-family:'Roboto Flex',sans-serif;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.18em;color:var(--dim);font-weight:500}
-.coral{color:var(--coral)}.teal{color:var(--teal)}.amber{color:var(--amber)}.pink{color:var(--pink)}
+.coral{color:var(--coral)}.teal{color:var(--teal)}.amber{color:var(--amber)}.orange{color:var(--orange)}.pink{color:var(--pink)}
 .gap{height:3vh}.gap-sm{height:1.5vh}.gap-lg{height:5vh}
 
 /* layout */
@@ -163,7 +163,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <div class="gap-lg"></div>
 <div class="agenda-row">
 <span class="agenda-num">01</span>
-<span class="agenda-title">the update</span>
+<span class="agenda-title">product overview</span>
 </div>
 <div class="agenda-row">
 <span class="agenda-num">02</span>
@@ -185,13 +185,87 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num">01</p>
-<h1>the update</h1>
+<h1>product<br>overview</h1>
 </div>
 </div>
 </div>
 
-<!-- ==================== SLIDE 3: WHERE WE LEFT OFF ==================== -->
+<!-- ==================== SLIDE 3: PRODUCT OVERVIEW & INTENT ==================== -->
 <div class="slide" data-slide="3">
+<div class="stagger">
+<p class="label coral">THE WHY</p>
+<div class="gap-sm"></div>
+<h2>what we set out to build</h2>
+<div class="gap"></div>
+<div style="max-width:54ch">
+<p style="color:var(--text);font-weight:700;font-size:clamp(1.3rem,1.8vw,1.8rem);line-height:1.35;margin-bottom:2.5vh">Hack HIV prevention relevance into moments where sexual health decisions are being made &mdash; without bumming the vibe.</p>
+<p class="body" style="margin-bottom:2vh">HIV/PrEP prevalence data already exists in AIDSVu spreadsheets and CDC reports. What doesn&rsquo;t exist is a way to bring that data into nightlife and cultural moments as a tool for community awareness &mdash; not fear.</p>
+<p class="body" style="margin-bottom:2vh">This platform meets the audience where they are: at Freddy parties, at festivals, in the moments before and after the decisions that shape sexual health outcomes. It makes prevention data personal, actionable, and community-oriented.</p>
+<p class="body">Everything that follows is the how. This slide is the why.</p>
+</div>
+<div class="gap-lg"></div>
+<div style="display:flex;gap:3vw">
+<div class="card-sm" style="flex:1;border-top:3px solid var(--orange)">
+<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);font-weight:600;margin-bottom:0.8vh">OBJECTIVE</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.55">Make HIV prevention data feel relevant at the exact moments people are making decisions about their sexual health.</p>
+</div>
+<div class="card-sm" style="flex:1;border-top:3px solid var(--teal)">
+<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);font-weight:600;margin-bottom:0.8vh">METHOD</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.55">A kiosk and web platform that turns public health data into a social, shareable experience &mdash; anchored by photos, localized by zip code.</p>
+</div>
+<div class="card-sm" style="flex:1;border-top:3px solid var(--amber)">
+<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--amber);font-weight:600;margin-bottom:0.8vh">POSITION</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.55">Not a health campaign. A prevention marketing platform that spans Gilead&rsquo;s entire Market Expansion footprint.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ==================== SLIDE 4: THE USER FLOW ==================== -->
+<div class="slide slide-top" data-slide="4" id="flow-slide">
+<div class="stagger">
+<p class="label coral">THE JOURNEY</p>
+<div class="gap-sm"></div>
+<h2>the user flow</h2>
+<div class="gap"></div>
+<div style="display:flex;gap:2vw;align-items:start">
+<div style="max-width:720px;flex:1">
+<div class="journey-row" id="jr-1"><span class="journey-num">1</span><span class="journey-name">Home screen</span><span class="journey-desc">Tonight's photos cycle until someone taps to start.</span></div>
+<div class="journey-row" id="jr-2"><span class="journey-num">2</span><span class="journey-name">Onboarding</span><span class="journey-desc">A quick intro explains what you'll be asked.</span></div>
+<div class="journey-row" id="jr-3"><span class="journey-num">3</span><span class="journey-name">Photo</span><span class="journey-desc">Quick countdown, one photo.</span></div>
+<div class="journey-row" id="jr-4"><span class="journey-num">4</span><span class="journey-name">Zip code</span><span class="journey-desc">Your zip code unlocks local data.</span></div>
+<div class="journey-row" id="jr-5"><span class="journey-num">5</span><span class="journey-name">PrEP question</span><span class="journey-desc">Your answer shapes the card and morning text.</span></div>
+<div class="journey-row" id="jr-6"><span class="journey-num">6</span><span class="journey-name">Close the gap</span><span class="journey-desc">The national PrEP story unfolds from 2012 to today.</span></div>
+<div class="journey-row" id="jr-7"><span class="journey-num">7</span><span class="journey-name">Your community</span><span class="journey-desc">Your borough's numbers appear and dots recalculate.</span></div>
+<div class="journey-row" id="jr-8"><span class="journey-num">8</span><span class="journey-name">Your impact</span><span class="journey-desc">Your photo appears among the dots.</span></div>
+<div class="journey-row" id="jr-9"><span class="journey-num">9</span><span class="journey-name">Card + contact</span><span class="journey-desc">Your photo is tinted with optional name and IG.</span></div>
+<div class="journey-row" id="jr-10"><span class="journey-num">10</span><span class="journey-name">Join the feed</span><span class="journey-desc">Choose public or private, both get a morning text.</span></div>
+<div class="journey-row" id="jr-11" style="border-bottom:none"><span class="journey-num">11</span><span class="journey-name">Done</span><span class="journey-desc">Photo prints. A QR code appears, then back to idle.</span></div>
+</div>
+<!-- bracket annotation — hidden until activated, positioned by JS -->
+<div id="flow-bracket" style="opacity:0;transition:opacity 500ms ease;display:flex;flex-direction:column;align-items:flex-start;padding-top:0">
+<div style="display:flex;align-items:stretch;gap:1vw">
+<div style="display:flex;flex-direction:column;justify-content:center">
+<!-- bracket shape -->
+<div style="position:relative;width:16px;height:100%">
+<div style="position:absolute;right:0;top:0;width:1.5px;height:100%;background:var(--coral)"></div>
+<div style="position:absolute;right:0;top:0;left:0;height:1.5px;background:var(--coral)"></div>
+<div style="position:absolute;right:0;bottom:0;left:0;height:1.5px;background:var(--coral)"></div>
+</div>
+</div>
+<div style="padding:1vh 0">
+<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral);font-weight:600;margin-bottom:0.5vh">INPUTS</p>
+<p style="font-size:0.88rem;color:var(--dim)">Photo, zip, and PrEP answer inform the data cards on steps 6, 7, and 8.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== SLIDE 5: WHERE WE LEFT OFF ==================== -->
+<div class="slide" data-slide="5">
 <div class="stagger">
 <p class="label coral">RECAP</p>
 <div class="gap-sm"></div>
@@ -230,8 +304,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 4: WHAT SHAPED THE DIRECTION ==================== -->
-<div class="slide slide-top" data-slide="4" id="direction-slide">
+<!-- ==================== SLIDE 6: WHAT SHAPED THE DIRECTION ==================== -->
+<div class="slide slide-top" data-slide="6" id="direction-slide">
 <div class="stagger">
 <p class="label coral">DIRECTION</p>
 <div class="gap-sm"></div>
@@ -298,50 +372,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 5: THE USER FLOW ==================== -->
-<div class="slide slide-top" data-slide="5" id="flow-slide">
-<div class="stagger">
-<p class="label coral">THE JOURNEY</p>
-<div class="gap-sm"></div>
-<h2>the user flow</h2>
-<div class="gap"></div>
-<div style="display:flex;gap:2vw;align-items:start">
-<div style="max-width:720px;flex:1">
-<div class="journey-row" id="jr-1"><span class="journey-num">1</span><span class="journey-name">Home screen</span><span class="journey-desc">Tonight's photos cycle until someone taps to start.</span></div>
-<div class="journey-row" id="jr-2"><span class="journey-num">2</span><span class="journey-name">Onboarding</span><span class="journey-desc">A quick intro explains what you'll be asked.</span></div>
-<div class="journey-row" id="jr-3"><span class="journey-num">3</span><span class="journey-name">Photo</span><span class="journey-desc">Quick countdown, one photo.</span></div>
-<div class="journey-row" id="jr-4"><span class="journey-num">4</span><span class="journey-name">Zip code</span><span class="journey-desc">Your zip code unlocks local data.</span></div>
-<div class="journey-row" id="jr-5"><span class="journey-num">5</span><span class="journey-name">PrEP question</span><span class="journey-desc">Your answer shapes the card and morning text.</span></div>
-<div class="journey-row" id="jr-6"><span class="journey-num">6</span><span class="journey-name">Close the gap</span><span class="journey-desc">The national PrEP story unfolds from 2012 to today.</span></div>
-<div class="journey-row" id="jr-7"><span class="journey-num">7</span><span class="journey-name">Your community</span><span class="journey-desc">Your borough's numbers appear and dots recalculate.</span></div>
-<div class="journey-row" id="jr-8"><span class="journey-num">8</span><span class="journey-name">Your impact</span><span class="journey-desc">Your photo appears among the dots.</span></div>
-<div class="journey-row" id="jr-9"><span class="journey-num">9</span><span class="journey-name">Card + contact</span><span class="journey-desc">Your photo is tinted with optional name and IG.</span></div>
-<div class="journey-row" id="jr-10"><span class="journey-num">10</span><span class="journey-name">Join the feed</span><span class="journey-desc">Choose public or private, both get a morning text.</span></div>
-<div class="journey-row" id="jr-11" style="border-bottom:none"><span class="journey-num">11</span><span class="journey-name">Done</span><span class="journey-desc">Photo prints. A QR code appears, then back to idle.</span></div>
-</div>
-<!-- bracket annotation — hidden until activated, positioned by JS -->
-<div id="flow-bracket" style="opacity:0;transition:opacity 500ms ease;display:flex;flex-direction:column;align-items:flex-start;padding-top:0">
-<div style="display:flex;align-items:stretch;gap:1vw">
-<div style="display:flex;flex-direction:column;justify-content:center">
-<!-- bracket shape -->
-<div style="position:relative;width:16px;height:100%">
-<div style="position:absolute;right:0;top:0;width:1.5px;height:100%;background:var(--coral)"></div>
-<div style="position:absolute;right:0;top:0;left:0;height:1.5px;background:var(--coral)"></div>
-<div style="position:absolute;right:0;bottom:0;left:0;height:1.5px;background:var(--coral)"></div>
-</div>
-</div>
-<div style="padding:1vh 0">
-<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral);font-weight:600;margin-bottom:0.5vh">INPUTS</p>
-<p style="font-size:0.88rem;color:var(--dim)">Photo, zip, and PrEP answer inform the data cards on steps 6, 7, and 8.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- ==================== SLIDE 6: SECTION — THE PRODUCT ==================== -->
-<div class="slide section-divider divider-teal" data-slide="6" style="padding:0">
+<!-- ==================== SLIDE 7: SECTION — THE PRODUCT ==================== -->
+<div class="slide section-divider divider-teal" data-slide="7" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num" style="color:rgba(238,234,217,0.4)">02</p>
@@ -350,8 +382,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 7: ONBOARDING ==================== -->
-<div class="slide" data-slide="7">
+<!-- ==================== SLIDE 8: ONBOARDING ==================== -->
+<div class="slide" data-slide="8">
 <div class="stagger">
 <p class="label teal">DEMO</p>
 <div class="gap-sm"></div>
@@ -367,8 +399,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 8: CLOSE THE GAP ==================== -->
-<div class="slide" data-slide="8">
+<!-- ==================== SLIDE 9: CLOSE THE GAP ==================== -->
+<div class="slide" data-slide="9">
 <div class="stagger">
 <p class="label teal">DATA</p>
 <div class="gap-sm"></div>
@@ -379,76 +411,51 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <div>
 <p style="color:var(--text);font-weight:700;font-size:clamp(1.3rem,1.8vw,1.8rem);margin-bottom:1.5vh;line-height:1.35">We lead with the national PrEP story.</p>
 <p class="small">The slider shows PrEP growing to 500K over time.</p>
-<p style="font-size:0.9rem;color:var(--coral);font-weight:500;margin-top:1.2vh">Your answer determines how this story is framed for you.</p>
+<p style="font-size:0.9rem;color:var(--orange);font-weight:500;margin-top:1.2vh">Your answer determines how this story is framed for you.</p>
 </div>
 </div>
 </div>
 </div>
 
-<!-- ==================== SLIDE 9: SEE YOUR COMMUNITY ==================== -->
-<div class="slide" data-slide="9">
-<div class="stagger">
-<p class="label teal">DATA</p>
-<div class="gap-sm"></div>
-<h2>see your state</h2>
-<div class="gap"></div>
-<div style="display:grid;grid-template-columns:auto 1fr;gap:4vw;align-items:center">
-<img src="assets/county-data.gif" alt="County data" style="height:min(750px,88vh);width:auto;border-radius:16px;border:2px solid #ffffff;display:block">
-<div>
-<p style="color:var(--text);font-weight:700;font-size:clamp(1.3rem,1.8vw,1.8rem);margin-bottom:1.5vh;line-height:1.35">HIV prevalence and PrEP coverage on the same map.</p>
-<p class="small">AIDSVu gives us prevalence, PrEP, and new diagnoses per county. We ratio them into 250 dots, coral for HIV and green for PrEP. Every number pulls directly from the published spreadsheet.</p>
-<p style="font-size:0.9rem;color:var(--coral);font-weight:500;margin-top:1.2vh">The gap between these dots is the prevention gap.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- ==================== SLIDE 10: PREP IN YOUR NEIGHBORHOOD ==================== -->
+<!-- ==================== SLIDE 10: CLOSE YOUR GAP ==================== -->
 <div class="slide slide-top" data-slide="10" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label teal">DATA</p>
 <div class="gap-sm"></div>
-<h2>prep in your neighborhood</h2>
+<h2>close your gap</h2>
 <div class="gap-sm"></div>
-<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);max-width:none;margin-bottom:1vh">Three approaches that use AIDSVu data to show how people fit into the prevention gap of their direct neighborhood.</p>
-<p style="font-size:0.85rem;color:var(--dim);margin-bottom:0.8vh">All three use the same public health data, told differently.</p>
+<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);max-width:none;margin-bottom:1vh">Your county&rsquo;s prevention gap, visualized as a community. The dots represent real identities &mdash; race, gender, age &mdash; so you see not just the gap, but whose gap is widest.</p>
 </div>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5vw;align-items:start">
-<!-- OPTION A: CLOSE YOUR GAP -->
+<div style="display:grid;grid-template-columns:auto 1fr;gap:4vw;align-items:start;margin-top:1vh">
+<img src="assets/impact.gif" alt="Close Your Gap interactive" style="max-width:320px;max-height:55vh;width:auto;height:auto;border-radius:16px;border:2px solid #ffffff;display:block">
 <div>
-<img src="assets/impact.gif" alt="Awareness ripple" style="max-width:280px;max-height:42vh;width:auto;height:auto;border-radius:16px;border:2px solid #ffffff;display:block;margin-bottom:1vh">
-<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">1. CLOSE YOUR GAP</p>
-<p style="font-size:0.8rem;color:var(--dim);line-height:1.45;margin-bottom:0.5vh">Awareness as conversation, not a clinical claim. Data cards use real AIDSVu numbers.</p>
-<ul style="font-size:0.75rem;color:var(--dim);line-height:1.5;padding-left:1.2em;margin:0">
-<li>National PrEP uptake animates from 2012 to today — the gap shrinks in real time</li>
-<li>Your zip pulls county-level coverage vs. new diagnoses to show your community's progress</li>
-<li>Your PrEP answer places you in the story: already helping, learning, or discovering</li>
-</ul>
+<div class="card-sm" style="border-left:3px solid var(--teal);margin-bottom:1.5vh">
+<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);font-weight:600;margin-bottom:0.8vh">THE VISUALIZATION</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.55;margin-bottom:0.6vh">Drag your window across the county to visualize spreading awareness. White dots are unaware, colored dots are aware. As you drag, white dots light up &mdash; you&rsquo;re closing the gap.</p>
+<p style="font-size:0.9rem;color:var(--orange);font-weight:500;margin-top:0.8vh">Orange dots = HIV prevalence. Green dots = PrEP coverage. The space between is the prevention gap.</p>
 </div>
-<!-- OPTION B: SEE YOUR STATE -->
-<div>
-<img src="assets/hivprepimpact.gif" alt="HIV and PrEP county map" style="max-width:280px;max-height:42vh;width:auto;height:auto;border-radius:16px;border:2px solid #ffffff;display:block;margin-bottom:1vh">
-<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--coral);font-weight:600;margin-bottom:0.5vh">2. SEE YOUR STATE</p>
-<p style="font-size:0.8rem;color:var(--dim);line-height:1.45;margin-bottom:0.5vh">Map and data cards both use AIDSVu. Prevalence and PrEP animate live. No "protective radius" framing.</p>
-<ul style="font-size:0.75rem;color:var(--dim);line-height:1.5;padding-left:1.2em;margin:0">
-<li>County-level map lights up HIV prevalence alongside PrEP coverage — two layers, one story</li>
-<li>Data card shows your borough's gap ratio: PrEP per 100K vs. new diagnoses per 100K</li>
-<li>Your answer shifts the tone — on PrEP users see contribution, others see local access</li>
-</ul>
+<div class="card-sm" style="border-left:3px solid var(--orange);margin-bottom:1.5vh">
+<p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);font-weight:600;margin-bottom:0.8vh">IDENTITY BREAKDOWN</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.55">Beneath the interactive map, a data card breaks down PrEP coverage by identity: race, gender, and age. Each dot represents a real demographic segment from AIDSVu &mdash; so you see whose gap is widest in your county.</p>
 </div>
-<!-- OPTION C: YOUR NEIGHBORHOOD -->
-<div>
-<img src="assets/identityview.gif" alt="Identity gap view" style="max-width:280px;max-height:42vh;width:auto;height:auto;border-radius:16px;border:2px solid #ffffff;display:block;margin-bottom:1vh">
-<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--amber);font-weight:600;margin-bottom:0.5vh">3. YOUR NEIGHBORHOOD</p>
-<p style="font-size:0.8rem;color:var(--dim);line-height:1.45;margin-bottom:0.5vh">Your photo pinned in your county. Four swipes reveal who PrEP reaches by race, age, gender, and overall.</p>
-<ul style="font-size:0.75rem;color:var(--dim);line-height:1.5;padding-left:1.2em;margin:0">
-<li>Your photo appears as a node on your county's map — you see yourself in the data</li>
-<li>Identity breakdowns show PrEP gaps by race, age, and gender via AIDSVu</li>
-<li>On PrEP? You see who you stand with. Not yet? You see who's missing</li>
-</ul>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1vw">
+<div class="card-sm" style="text-align:center;padding:1.2vw">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--dim);font-weight:600;margin-bottom:0.5vh">BY RACE</p>
+<p style="font-size:0.85rem;color:var(--muted);line-height:1.4">Black men have the widest PrEP gap nationally &mdash; 8x fewer on PrEP relative to diagnosis rate.</p>
+</div>
+<div class="card-sm" style="text-align:center;padding:1.2vw">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--dim);font-weight:600;margin-bottom:0.5vh">BY GENDER</p>
+<p style="font-size:0.85rem;color:var(--muted);line-height:1.4">Women represent a growing share of new diagnoses but remain underrepresented in PrEP uptake.</p>
+</div>
+<div class="card-sm" style="text-align:center;padding:1.2vw">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--dim);font-weight:600;margin-bottom:0.5vh">BY AGE</p>
+<p style="font-size:0.85rem;color:var(--muted);line-height:1.4">18&ndash;24 year-olds have the highest new diagnosis rate and the lowest PrEP coverage.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
+
 
 <!-- ==================== SLIDE 11: ANSWERS + SMS PREVIEW ==================== -->
 <div class="slide slide-top" data-slide="11" id="answers-slide" style="padding-top:6vh;padding-bottom:4vh">
@@ -608,33 +615,213 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 15: WHAT'S POSSIBLE ==================== -->
-<div class="slide slide-top" data-slide="15">
+<!-- ==================== SLIDE 15: ACTIVATION CONTEXTS ==================== -->
+<div class="slide slide-top" data-slide="15" style="padding-top:8vh">
 <div class="stagger">
 <p class="label amber">SCALE</p>
 <div class="gap-sm"></div>
-<h2>what's possible</h2>
+<h2>activation contexts</h2>
 <div class="gap-sm"></div>
-<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);max-width:60ch">The app lives beyond the event. Reusable across parties, integrated with merch and signage, and open to in-app experiences like drink tickets.</p>
+<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);max-width:60ch;margin-bottom:2vh">This isn&rsquo;t a Freddy-specific tool. It&rsquo;s prevention marketing infrastructure that spans Gilead&rsquo;s entire Market Expansion footprint.</p>
+</div>
+<div class="g2" style="gap:2.5vw;align-items:start">
+<div class="card" style="border-top:4px solid var(--coral)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--coral);font-weight:600;margin-bottom:1.5vh">CONSUMER / CULTURAL</p>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Freddy parties (LA, NYC, Atlanta)</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Music festivals (Lollapalooza-scale)</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Nightlife activations and club partnerships</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Cultural pop-ups and brand collaborations</p>
+</div>
+</div>
+<div class="card" style="border-top:4px solid var(--teal)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--teal);font-weight:600;margin-bottom:1.5vh">HCP / MEDICAL</p>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">CROI (Conference on Retroviruses)</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">IDWeek (Infectious Diseases Society)</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">EACS (European AIDS Clinical Society)</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">USCHA &amp; American HIV Conference</p>
+</div>
+</div>
+<div class="card" style="border-top:4px solid var(--amber)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--amber);font-weight:600;margin-bottom:1.5vh">COMMUNITY</p>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">AIDS Walk activations (NYC, LA, SF)</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">World AIDS Day installations</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Pride festivals and community health fairs</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Local advocacy org partnerships</p>
+</div>
+</div>
+<div class="card" style="border-top:4px solid var(--orange)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--orange);font-weight:600;margin-bottom:1.5vh">CULTURAL TENTPOLES</p>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">World Cup watch parties and fan zones</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Major sports events and viewing activations</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Business conventions and industry summits</p>
+<p style="font-size:1.05rem;color:var(--muted);line-height:1.5">Award show events and after-parties</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ==================== SLIDE 16: SCALING & PER-EVENT CUSTOMIZATION ==================== -->
+<div class="slide slide-top" data-slide="16" style="padding-top:6vh">
+<div class="stagger">
+<p class="label amber">PLATFORM</p>
+<div class="gap-sm"></div>
+<h2>one platform, infinite contexts</h2>
+<div class="gap-sm"></div>
+<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);max-width:60ch;margin-bottom:1.5vh">Same backend, same data engine, same compliance architecture. The copy, CTAs, and identity capture fields swap per moment.</p>
+</div>
+<div class="g4" style="align-items:start">
+<div class="card-sm" style="border-top:3px solid var(--coral)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral);font-weight:600;margin-bottom:1vh">CONSUMER</p>
+<p style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:0.5vh">Freddy Party</p>
+<div style="display:flex;flex-direction:column;gap:0.8vh;margin-top:1vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CAPTURES</p>
+<p style="font-size:0.88rem;color:var(--muted)">Instagram handle</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">FRAMING</p>
+<p style="font-size:0.88rem;color:var(--muted)">&ldquo;Close Your Gap&rdquo; community awareness</p>
+</div>
+<div>
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CTA</p>
+<p style="font-size:0.88rem;color:var(--muted)">Share your card, join the feed</p>
+</div>
+</div>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--teal)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);font-weight:600;margin-bottom:1vh">HCP</p>
+<p style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:0.5vh">Medical Conference</p>
+<div style="display:flex;flex-direction:column;gap:0.8vh;margin-top:1vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CAPTURES</p>
+<p style="font-size:0.88rem;color:var(--muted)">LinkedIn profile</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">FRAMING</p>
+<p style="font-size:0.88rem;color:var(--muted)">Clinical data-forward, prescriber-relevant CTAs</p>
+</div>
+<div>
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CTA</p>
+<p style="font-size:0.88rem;color:var(--muted)">View prescribing data for your region</p>
+</div>
+</div>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--amber)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--amber);font-weight:600;margin-bottom:1vh">CULTURAL</p>
+<p style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:0.5vh">Festival</p>
+<div style="display:flex;flex-direction:column;gap:0.8vh;margin-top:1vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CAPTURES</p>
+<p style="font-size:0.88rem;color:var(--muted)">Personality / vibe prompt</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">FRAMING</p>
+<p style="font-size:0.88rem;color:var(--muted)">Social feed-forward, shareable moments</p>
+</div>
+<div>
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CTA</p>
+<p style="font-size:0.88rem;color:var(--muted)">Drop your vibe, see who matches</p>
+</div>
+</div>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--orange)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);font-weight:600;margin-bottom:1vh">COMMUNITY</p>
+<p style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:0.5vh">AIDS Walk</p>
+<div style="display:flex;flex-direction:column;gap:0.8vh;margin-top:1vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CAPTURES</p>
+<p style="font-size:0.88rem;color:var(--muted)">Local org affiliation</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:0.8vh">
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">FRAMING</p>
+<p style="font-size:0.88rem;color:var(--muted)">Local data + allyship, lighter social layer</p>
+</div>
+<div>
+<p style="font-size:0.78rem;color:var(--dim);font-weight:600">CTA</p>
+<p style="font-size:0.88rem;color:var(--muted)">See your neighborhood&rsquo;s gap</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ==================== SLIDE 17: KIOSK VS WEB APP ==================== -->
+<div class="slide" data-slide="17">
+<div class="stagger">
+<p class="label amber">DELIVERY</p>
+<div class="gap-sm"></div>
+<h2>how it shows up</h2>
 <div class="gap"></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:3vw;align-items:start">
-<div>
-<img src="assets/possible-reusable.png" alt="Reusable" style="width:100%;aspect-ratio:16/10;border-radius:16px;border:2px solid #ffffff;object-fit:cover;display:block;margin-bottom:1.5vh">
-<h3 style="font-size:1.15rem">Reusable</h3>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.4vh">Built once, deployed anywhere with fresh branding.</p>
+<div class="g2" style="align-items:start">
+<!-- KIOSK + WEB APP -->
+<div class="card" style="border-top:4px solid var(--teal)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">RECOMMENDED</p>
+<h3 style="margin-bottom:2vh">Kiosk + Web App</h3>
+<div style="display:flex;flex-direction:column;gap:1.4vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">The photo moment</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Controlled camera, high quality, group shots.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Physical presence</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">The kiosk draws people in at the venue.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Phone extends the reach</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">QR at the kiosk opens the feed on mobile.</p>
 </div>
 <div>
-<img src="assets/possible-physical.png" alt="Beyond the screen" style="width:100%;aspect-ratio:16/10;border-radius:16px;border:2px solid #ffffff;object-fit:cover;display:block;margin-bottom:1.5vh">
-<h3 style="font-size:1.15rem">Beyond the screen</h3>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.4vh">Photo cards, coasters, wristbands, and more.</p>
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Throughput</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">150–200 at the kiosk, 500+ on phones.</p>
 </div>
 </div>
+</div>
+<!-- WEB APP ONLY -->
+<div class="card" style="border-top:4px solid var(--amber)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--amber);font-weight:600;margin-bottom:0.5vh">ALTERNATIVE</p>
+<h3 style="margin-bottom:2vh">Web App Only</h3>
+<div style="display:flex;flex-direction:column;gap:1.4vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">No hardware</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">No shipping, no setup, no install team.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Access control</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">QR + passcode limits it to the event.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Same experience</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Same data, same feed, same morning text.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Drink tickets + event flows</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">In-app drink redemption, merch unlocks, or sponsor activations tied to participation.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Lives beyond the event</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">The app stays accessible after the party — users revisit their data, share cards, and stay connected to the feed.</p>
+</div>
+<div>
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Trade-off</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">No controlled photo, risk of off-site uploads.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="gap"></div>
+<p style="color:var(--text);font-weight:600;font-size:clamp(1.1rem,1.4vw,1.4rem)">We recommend kiosk + web app for both Freddie parties.</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:1vh">The same infrastructure powers future events after this one.</p>
 </div>
 </div>
 
-
-<!-- ==================== SLIDE 16: SECTION — THE BACKEND ==================== -->
-<div class="slide section-divider divider-amber" data-slide="16" style="padding:0">
+<!-- ==================== SLIDE 18: SECTION — THE BACKEND ==================== -->
+<div class="slide section-divider divider-amber" data-slide="18" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num">03</p>
@@ -643,8 +830,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 17: HOW DATA MOVES ==================== -->
-<div class="slide slide-top" data-slide="17" id="data-moves-slide">
+<!-- ==================== SLIDE 19: HOW DATA MOVES ==================== -->
+<div class="slide slide-top" data-slide="19" id="data-moves-slide">
 <div class="stagger">
 <p class="label amber">SYSTEM</p>
 <div class="gap-sm"></div>
@@ -749,8 +936,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 18: METHODOLOGY + DATA BOUNDARIES ==================== -->
-<div class="slide slide-top" data-slide="18">
+<!-- ==================== SLIDE 20: METHODOLOGY + DATA BOUNDARIES ==================== -->
+<div class="slide slide-top" data-slide="20">
 <div class="stagger">
 <p class="label teal">METHODOLOGY</p>
 <div class="gap-sm"></div>
@@ -764,7 +951,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 <div class="card-sm" style="border-left:3px solid var(--teal)">
 <h3 style="margin-bottom:0.8vh;font-size:1.05rem">The Community Map + Data Card</h3>
-<p style="font-size:0.95rem;color:var(--muted);line-height:1.55">Prevalence, PrEP, and new diagnoses on one map. Coral dots for HIV, green for PrEP. The data card shows all three with the gap ratio.</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.55">Prevalence, PrEP, and new diagnoses on one map. Orange dots for HIV, green for PrEP. The data card shows all three with the gap ratio.</p>
 </div>
 <div class="card-sm" style="border-left:3px solid var(--coral)">
 <h3 style="margin-bottom:0.8vh;font-size:1.05rem">The Impact Screen</h3>
@@ -804,8 +991,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 19: LEGAL — DATA ==================== -->
-<div class="slide" data-slide="19">
+<!-- ==================== SLIDE 21: LEGAL — DATA ==================== -->
+<div class="slide" data-slide="21">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -834,8 +1021,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 20: LEGAL — PRIVACY ==================== -->
-<div class="slide slide-top" data-slide="20">
+<!-- ==================== SLIDE 22: LEGAL — PRIVACY ==================== -->
+<div class="slide slide-top" data-slide="22">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -880,8 +1067,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 21: RETENTION + CLAIMS ==================== -->
-<div class="slide" data-slide="21">
+<!-- ==================== SLIDE 23: RETENTION + CLAIMS ==================== -->
+<div class="slide" data-slide="23">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -911,84 +1098,183 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 22: KIOSK VS WEB APP ==================== -->
-<div class="slide" data-slide="22">
+<!-- ==================== SLIDE 24: OPT-IN / OPT-OUT LANGUAGE ==================== -->
+<div class="slide slide-top" data-slide="24" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
-<p class="label amber">DELIVERY</p>
+<p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
-<h2>how it shows up</h2>
-<div class="gap"></div>
-<div class="g2" style="align-items:start">
-<!-- KIOSK + WEB APP -->
-<div class="card" style="border-top:4px solid var(--teal)">
-<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">RECOMMENDED</p>
-<h3 style="margin-bottom:2vh">Kiosk + Web App</h3>
-<div style="display:flex;flex-direction:column;gap:1.4vh">
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">The photo moment</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Controlled camera, high quality, group shots.</p>
+<h2>opt-in / opt-out language</h2>
+<div class="gap-sm"></div>
+<p style="font-size:clamp(0.88rem,1.05vw,1.05rem);color:var(--muted);margin-bottom:1.5vh">Here&rsquo;s our proposed default &mdash; we expect legal to redline and we&rsquo;ll incorporate directly.</p>
+<div class="g2" style="gap:2vw;align-items:start">
+<div>
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--teal);font-weight:600;margin-bottom:1.5vh">PROPOSED LANGUAGE</p>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:0.3vh">Onboarding Consent</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5;font-style:italic">&ldquo;This experience uses your zip code and one optional question to show you local HIV prevention data. Your photo will be taken at the kiosk. You can skip any step or stop at any time.&rdquo;</p>
 </div>
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Physical presence</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">The kiosk draws people in at the venue.</p>
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:0.3vh">Feed Opt-In</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5;font-style:italic">&ldquo;Your card will be visible on tonight&rsquo;s feed. Others at the event can see your photo. You can choose private instead &mdash; you&rsquo;ll still get your morning text.&rdquo;</p>
 </div>
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Phone extends the reach</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">QR at the kiosk opens the feed on mobile.</p>
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:0.3vh">SMS Opt-In</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5;font-style:italic">&ldquo;Enter your phone number to receive your photo and a follow-up message tomorrow at 11am. Standard messaging rates apply. You can opt out at any time by replying STOP.&rdquo;</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:0.3vh">SMS Opt-Out (TCPA / 10DLC)</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5;font-style:italic">&ldquo;Reply STOP to unsubscribe. Reply HELP for support. Msg frequency: max 2 msgs. Msg &amp; data rates may apply.&rdquo;</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--dim)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:0.3vh">Prefer Not to Say</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5;font-style:italic">&ldquo;That&rsquo;s completely fine. You&rsquo;ll still see the national prevention story and get your photo card. Your experience continues without this answer.&rdquo;</p>
+</div>
+</div>
 </div>
 <div>
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Throughput</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">150–200 at the kiosk, 500+ on phones.</p>
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--coral);font-weight:600;margin-bottom:1.5vh">LANGUAGE WE WILL NEVER USE</p>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<div class="card-sm" style="border-left:3px solid var(--coral)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--coral);margin-bottom:0.3vh">Health claims we cannot substantiate</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">&ldquo;Protective radius,&rdquo; &ldquo;you&rsquo;re protected,&rdquo; or any language implying personal medical efficacy.</p>
 </div>
+<div class="card-sm" style="border-left:3px solid var(--coral)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--coral);margin-bottom:0.3vh">Fear-based framing</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">&ldquo;You&rsquo;re at risk,&rdquo; &ldquo;your community is in danger,&rdquo; or any language designed to alarm rather than inform.</p>
 </div>
+<div class="card-sm" style="border-left:3px solid var(--coral)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--coral);margin-bottom:0.3vh">Medical advice language</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">&ldquo;You should get on PrEP,&rdquo; &ldquo;talk to your doctor about,&rdquo; or any language implying the platform recommends treatment.</p>
 </div>
-<!-- WEB APP ONLY -->
-<div class="card" style="border-top:4px solid var(--amber)">
-<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--amber);font-weight:600;margin-bottom:0.5vh">ALTERNATIVE</p>
-<h3 style="margin-bottom:2vh">Web App Only</h3>
-<div style="display:flex;flex-direction:column;gap:1.4vh">
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">No hardware</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">No shipping, no setup, no install team.</p>
-</div>
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Access control</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">QR + passcode limits it to the event.</p>
-</div>
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Same experience</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Same data, same feed, same morning text.</p>
-</div>
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Drink tickets + event flows</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">In-app drink redemption, merch unlocks, or sponsor activations tied to participation.</p>
-</div>
-<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Lives beyond the event</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">The app stays accessible after the party — users revisit their data, share cards, and stay connected to the feed.</p>
-</div>
-<div>
-<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Trade-off</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">No controlled photo, risk of off-site uploads.</p>
+<div class="card-sm" style="border-left:3px solid var(--coral)">
+<p style="font-size:0.82rem;font-weight:600;color:var(--coral);margin-bottom:0.3vh">Diagnostic language</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">&ldquo;Your risk level,&rdquo; &ldquo;your status,&rdquo; or any language implying the platform diagnoses or categorizes health status.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="gap"></div>
-<p style="color:var(--text);font-weight:600;font-size:clamp(1.1rem,1.4vw,1.4rem)">We recommend kiosk + web app for both Freddie parties.</p>
-<p style="font-size:0.9rem;color:var(--dim);margin-top:1vh">The same infrastructure powers future events after this one.</p>
 </div>
 </div>
 
-<!-- ==================== SLIDE 23: BUDGET SUMMARY ==================== -->
-<div class="slide section-divider" data-slide="23" data-dark="true" style="background:var(--darkbrown);padding:0;justify-content:flex-end;align-items:flex-start;padding:12vh 8vw">
+
+<!-- ==================== SLIDE 25: TERMS OF SERVICE ==================== -->
+<div class="slide slide-top" data-slide="25" style="padding-top:6vh">
+<div class="stagger">
+<p class="label amber">LEGAL</p>
+<div class="gap-sm"></div>
+<h2>terms of service</h2>
+<div class="gap-sm"></div>
+<p style="font-size:clamp(0.88rem,1.05vw,1.05rem);color:var(--muted);margin-bottom:1.5vh;max-width:60ch">We&rsquo;re coming in with a position, not a question. Here&rsquo;s our recommended ToS structure based on Google&rsquo;s custom ToS pattern &mdash; Calvary built Google&rsquo;s consent framework for similar event-based data collection.</p>
+<div class="gap"></div>
+<div class="g2" style="gap:3vw;align-items:start">
+<div>
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--teal);font-weight:600;margin-bottom:1.5vh">RECOMMENDED STRUCTURE</p>
+<div class="card" style="border-left:3px solid var(--teal)">
+<div style="display:flex;flex-direction:column;gap:1.4vh">
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Lightweight ToS at consent screen</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Scrollable, agree-to-continue. Presented before any data collection.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Aligned with 24-hour purge</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">ToS explicitly states all data is deleted within 24 hours. No long-term profiles.</p>
+</div>
+<div style="border-bottom:1px solid var(--border);padding-bottom:1.2vh">
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Plain language, not legalese</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Written at an 8th-grade reading level. Every clause has a one-sentence plain English summary.</p>
+</div>
+<div>
+<p style="font-size:1.05rem;font-weight:600;color:var(--text)">Precedent: Google Events ToS</p>
+<p style="font-size:0.9rem;color:var(--dim);margin-top:0.3vh">Event-specific, time-limited, data-minimal. The same pattern Google uses for activation-based data collection.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--amber);font-weight:600;margin-bottom:1.5vh">WHAT IT COVERS</p>
+<div style="display:flex;flex-direction:column;gap:0.8vh">
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">What we collect:</strong> zip code, one PrEP awareness question, one photo, optional phone number and social handle.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">What we don&rsquo;t:</strong> name, email, GPS location, device ID, browsing history, or any health records.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">How long we hold it:</strong> 24 hours max. Photos purged morning-after. Phone numbers deleted after morning text.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">How to opt out:</strong> skip any step, leave at any time, reply STOP to texts. No penalty for opting out.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Compliance:</strong> TCPA/10DLC for SMS, state privacy law coverage, encryption at rest and in transit.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Jurisdiction:</strong> ToS governed by state where event occurs. Data processed in US only.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ==================== SLIDE 26: DATA BREACH & RISK MITIGATION ==================== -->
+<div class="slide slide-top" data-slide="26" style="padding-top:6vh;padding-bottom:4vh">
+<div class="stagger">
+<p class="label amber">LEGAL</p>
+<div class="gap-sm"></div>
+<h2>risk mitigation</h2>
+<div class="gap-sm"></div>
+<p style="font-size:clamp(0.88rem,1.05vw,1.05rem);color:var(--muted);margin-bottom:1vh;max-width:60ch">Directly addresses the &ldquo;data booth&rdquo; concern. Every risk maps to a specific safeguard.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2vw;align-items:start">
+<div style="display:flex;flex-direction:column;gap:1vh">
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">ENCRYPTION</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">At rest:</strong> AES-256 on GCP/AWS with default encryption enabled.</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">In transit:</strong> TLS 1.2+ for all API calls and data transfers.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">24-HOUR PURGE</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">Zip codes, PrEP answers, and photos deleted within 24 hours. Phone numbers deleted after morning text. No data persists beyond the event window.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--teal)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">NO PII CO-LOCATION</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">Name, zip, photo, and PrEP answer are never stored in the same row or joinable table. Even in a breach, no single record reconstructs a person.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:1vh">
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--amber);font-weight:600;margin-bottom:0.5vh">CONTRACTUAL PROTECTIONS</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Indemnification:</strong> Mutual indemnification between Seneca/Vega, Majority, and Gilead.</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Liability caps:</strong> Aligned with standard SaaS agreements for event-based platforms.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--amber)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--amber);font-weight:600;margin-bottom:0.5vh">INSURANCE</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5">Cyber liability coverage, event insurance, and E&amp;O policy. Coverage extends to data handling, event operations, and third-party claims.</p>
+</div>
+<div class="card-sm" style="border-left:3px solid var(--coral)">
+<p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--coral);font-weight:600;margin-bottom:0.5vh">BREACH RESPONSE PLAN</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Detection:</strong> Real-time monitoring on cloud infrastructure.</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Notification:</strong> Gilead informed within 24 hours of confirmed breach.</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Forensics:</strong> Third-party forensic audit engaged within 48 hours.</p>
+<p style="font-size:0.88rem;color:var(--muted);line-height:1.5"><strong style="color:var(--text)">Mitigation:</strong> 24-hour purge means breach exposure window is inherently narrow.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ==================== SLIDE 27: BUDGET SUMMARY ==================== -->
+<div class="slide section-divider" data-slide="27" data-dark="true" style="background:var(--darkbrown);padding:0;justify-content:flex-end;align-items:flex-start;padding:12vh 8vw">
 <div class="stagger">
 <h1 style="font-size:clamp(5rem,10vw,10rem);color:rgba(238,234,217,0.9);line-height:0.95">Budget<br>Summary</h1>
 </div>
 </div>
 
-<!-- ==================== SLIDE 24: PHASE 1 — OPTION 1 ==================== -->
-<div class="slide slide-top" data-slide="24" data-dark="true" style="background:var(--darkbrown)">
+<!-- ==================== SLIDE 28: PHASE 1 — OPTION 1 ==================== -->
+<div class="slide slide-top" data-slide="28" data-dark="true" style="background:var(--darkbrown)">
 <div class="stagger">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4vh">
 <p style="font-size:0.78rem;color:rgba(238,234,217,0.35);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em">Majority</p>
@@ -1026,8 +1312,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 25: PHASE 1 — OPTION 2 ==================== -->
-<div class="slide slide-top" data-slide="25" data-dark="true" style="background:var(--darkbrown)">
+<!-- ==================== SLIDE 29: PHASE 1 — OPTION 2 ==================== -->
+<div class="slide slide-top" data-slide="29" data-dark="true" style="background:var(--darkbrown)">
 <div class="stagger">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4vh">
 <p style="font-size:0.78rem;color:rgba(238,234,217,0.35);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em">Majority</p>
@@ -1056,8 +1342,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 26: THANK YOU ==================== -->
-<div class="slide" data-slide="26" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
+<!-- ==================== SLIDE 30: THANK YOU ==================== -->
+<div class="slide" data-slide="30" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
 <div class="stagger">
 <h1 style="font-size:clamp(5rem,10vw,10rem);color:var(--lime);line-height:0.95">Thank<br>You.</h1>
 <div style="height:6vh"></div>
@@ -1065,101 +1351,13 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <p style="font-size:0.85rem;color:rgba(238,234,217,0.25);font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;margin-top:0.6vh">ceej@vega.earth</p>
 </div>
 </div>
-
-
-<!-- ==================== SLIDE 22: BUDGET SUMMARY ==================== -->
-<div class="slide section-divider" data-slide="22" data-dark="true" style="background:var(--darkbrown);padding:0;justify-content:flex-end;align-items:flex-start;padding:12vh 8vw">
-<div class="stagger">
-<h1 style="font-size:clamp(5rem,10vw,10rem);color:rgba(238,234,217,0.9);line-height:0.95">Budget<br>Summary</h1>
-</div>
-</div>
-
-<!-- ==================== SLIDE 23: PHASE 1 — OPTION 1 ==================== -->
-<div class="slide slide-top" data-slide="23" data-dark="true" style="background:var(--darkbrown)">
-<div class="stagger">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4vh">
-<p style="font-size:0.78rem;color:rgba(238,234,217,0.35);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em">Majority</p>
-<p style="font-size:0.78rem;color:rgba(238,234,217,0.25);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em">Proprietary + Confidential</p>
-</div>
-<p class="label" style="color:rgba(238,234,217,0.4);margin-bottom:1.5vh">Phase 1 — Option 1</p>
-<h2 style="color:var(--lime);font-size:clamp(1.8rem,3vw,3rem);margin-bottom:3vh">The Feed &amp; Signals w/ Kiosk <span style="color:rgba(238,234,217,0.6)">(~$350k)</span></h2>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:start">
-<div style="display:flex;flex-direction:column;gap:1.4vh">
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Activation across LA &amp; NYC</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span>
-  <div>
-    <p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">4 custom branded kiosks (49″ touchscreens), shipping &amp; logistics, on-site installation, and printed takeaways for guests</p>
-    <div style="margin-top:1vh;padding-left:1.5vw;display:flex;flex-direction:column;gap:0.8vh">
-      <div style="display:flex;gap:1vw;align-items:flex-start"><span style="color:var(--amber);flex-shrink:0;font-size:0.85em">—</span><p style="font-size:clamp(0.85rem,1.05vw,1.05rem);color:rgba(238,234,217,0.55);line-height:1.5;max-width:none">3x days: load-in, event &amp; load-out</p></div>
-      <div style="display:flex;gap:1vw;align-items:flex-start"><span style="color:var(--amber);flex-shrink:0;font-size:0.85em">—</span>
-        <div>
-          <p style="font-size:clamp(0.85rem,1.05vw,1.05rem);color:rgba(238,234,217,0.55);line-height:1.5;max-width:none">Option for scalability based on the event</p>
-          <div style="padding-left:1.5vw;margin-top:0.5vh"><div style="display:flex;gap:1vw;align-items:flex-start"><span style="color:rgba(238,234,217,0.3);flex-shrink:0;font-size:0.8em">—</span><p style="font-size:clamp(0.8rem,0.95vw,0.95rem);color:rgba(238,234,217,0.4);line-height:1.5;max-width:none">4 kiosks based on ~1500 attendees</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">A live social platform where photos taken at the kiosks appear instantly on a mobile app for sharing &amp; connecting with other party goers. Opportunity for shareability driving awareness and engagement beyond the event.</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Interactive node map showcasing HIV data based on the user's zip code</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">SMS platform (Twilio) and AWS Cloud Hosting for user session data and photo storage</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Team fees inclusive of our Creative Director, Creative Strategist, Designer and Project Manager, and three specialized Developer teams for kiosk integration, data backend, and front end effects</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--lime);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Travel logistics for our NY and San Diego-based teams, covering flights, hotels, and airport transfer</p></div>
-</div>
-<div style="width:100%;height:70vh;border-radius:10px;overflow:hidden">
-<img src="assets/kiosk%20party%20mock%201.png" alt="Kiosk Party Mock" style="width:100%;height:100%;object-fit:cover;display:block">
-</div>
-</div>
-</div>
-</div>
-
-<!-- ==================== SLIDE 24: PHASE 1 — OPTION 2 ==================== -->
-<div class="slide slide-top" data-slide="24" data-dark="true" style="background:var(--darkbrown)">
-<div class="stagger">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4vh">
-<p style="font-size:0.78rem;color:rgba(238,234,217,0.35);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em">Majority</p>
-<p style="font-size:0.78rem;color:rgba(238,234,217,0.25);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em">Proprietary + Confidential</p>
-</div>
-<p class="label" style="color:rgba(238,234,217,0.4);margin-bottom:1.5vh">Phase 1 — Option 2</p>
-<h2 style="color:var(--coral);font-size:clamp(1.8rem,3vw,3rem);margin-bottom:3vh">The Feed &amp; Signals w/o Kiosk <span style="color:rgba(238,234,217,0.6)">(~$215k)</span></h2>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:start">
-<div style="display:flex;flex-direction:column;gap:1.4vh">
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--coral);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Activation across LA &amp; NYC</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--coral);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">A live social platform where photos taken on the guest's phones appear instantly on a mobile app for sharing &amp; connecting with other party goers.</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--coral);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Interactive node map showcasing HIV data based on the user's zip code</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--coral);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">SMS platform (Twilio) and AWS Cloud Hosting for user session data and photo storage</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--coral);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Team fees inclusive of our Creative Director, Creative Strategist, Designer and Project Manager, and three specialized Developer teams for QA support, data backend, and front end effects</p></div>
-<div style="display:flex;gap:1.4vw;align-items:flex-start"><span style="color:var(--coral);flex-shrink:0;margin-top:0.15em">—</span><p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:rgba(238,234,217,0.75);line-height:1.6;max-width:none">Travel logistics for our NY and San Diego-based teams, covering flights, hotels, and airport transfer</p></div>
-</div>
-<div style="display:flex;flex-direction:column;gap:1.2vh">
-<div style="width:100%;height:34vh;border-radius:10px;overflow:hidden">
-<img src="assets/mobile%20app%20party%20mock%201.png" alt="Mobile App Party Mock" style="width:100%;height:100%;object-fit:cover;display:block">
-</div>
-<div style="width:100%;height:34vh;border-radius:10px;overflow:hidden">
-<img src="assets/first%20person%20mobile.png" alt="First Person Mobile" style="width:100%;height:100%;object-fit:cover;display:block">
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- ==================== SLIDE 25: THANK YOU ==================== -->
-<div class="slide" data-slide="25" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
-<div class="stagger">
-<h1 style="font-size:clamp(5rem,10vw,10rem);color:var(--lime);line-height:0.95">Thank<br>You.</h1>
-<div style="height:6vh"></div>
-<p style="font-size:0.85rem;color:rgba(238,234,217,0.3);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em">Prepared by Vega Studio</p>
-<p style="font-size:0.85rem;color:rgba(238,234,217,0.25);font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;margin-top:0.6vh">ceej@vega.earth</p>
-</div>
-</div>
-
 </div><!-- end .deck -->
 
 <div class="nav">
 <button class="nav-btn" onclick="navigate(-1)">&#8592;</button>
 <button class="nav-btn" onclick="navigate(1)">&#8594;</button>
 </div>
-<div class="counter" id="counter">1 / 27</div>
+<div class="counter" id="counter">1 / 31</div>
 
 <script>
 (function(){
