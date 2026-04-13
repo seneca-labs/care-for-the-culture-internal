@@ -726,84 +726,100 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE: ALL IN ONE PLACE ==================== -->
-<div class="slide" data-slide="20" style="padding:4vh 6vw 3vh">
-<div class="stagger">
+<div class="slide" data-slide="20" style="padding:3vh 5vw 2vh">
+<div>
 <p class="label orange">SCALE</p>
 <div class="gap-sm"></div>
 <h2>all in one place.</h2>
 <p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">One dashboard. Every event, every metric, every insight.</p>
 </div>
-<div style="height:1vh"></div>
+<div style="height:0.8vh"></div>
 <!-- DASHBOARD -->
-<div id="dash-container" style="flex:1;background:var(--surface-light);border:1.5px solid var(--border);border-radius:14px;padding:2vw 2.5vw;overflow:hidden;display:flex;flex-direction:column;gap:1.5vh">
+<div id="dash-container" style="flex:1;background:#3C2400;border-radius:14px;padding:1.5vw 2vw;overflow:hidden;display:flex;flex-direction:column;gap:1.2vh;color:#EEEAD9">
 
-<!-- ROW 1: KPI Cards -->
-<div style="display:flex;gap:1.2vw">
-<div style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;border-left:3px solid var(--teal)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--teal);line-height:1">+34%</p>
-<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Awareness lift</p>
+<!-- HEADER BAR -->
+<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0.8vh;border-bottom:1px solid rgba(238,234,217,0.08)">
+<div style="display:flex;align-items:center;gap:1vw">
+<p style="font-family:'Anton',sans-serif;font-size:1rem;color:var(--lime);text-transform:uppercase;letter-spacing:0.05em">Care for the Culture</p>
+<p style="font-size:0.6rem;color:rgba(238,234,217,0.35);font-family:'JetBrains Mono',monospace">ANALYTICS</p>
 </div>
-<div style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;border-left:3px solid var(--orange)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--orange);line-height:1">52%</p>
-<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Morning text CTR</p>
-</div>
-<div style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;border-left:3px solid var(--teal)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--teal);line-height:1">87%</p>
-<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Completion rate</p>
-</div>
-<div style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;border-left:3px solid var(--orange)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(1.8rem,2.8vw,2.8rem);color:var(--orange);line-height:1">19%</p>
-<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Follow-through</p>
+<div style="display:flex;gap:1.5vw;align-items:center">
+<p style="font-size:0.55rem;color:rgba(238,234,217,0.4);font-family:'JetBrains Mono',monospace">Q2 2026</p>
+<p style="font-size:0.55rem;color:rgba(238,234,217,0.4);font-family:'JetBrains Mono',monospace">5 events</p>
+<p style="font-size:0.55rem;color:rgba(238,234,217,0.4);font-family:'JetBrains Mono',monospace">4,812 participants</p>
 </div>
 </div>
 
-<!-- ROW 2: Four vertical bar charts -->
-<div style="display:flex;gap:1.2vw;flex:1;min-height:0">
-
-<!-- CHART 1: Awareness by event — TEAL -->
-<div style="flex:1;background:rgba(76,48,13,0.02);border-radius:8px;padding:1vw 1vw 0.6vw;display:flex;flex-direction:column">
-<p style="font-size:0.5rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--teal);font-weight:600;margin-bottom:0.5vh">Awareness by event</p>
-<div style="flex:1;display:flex;align-items:flex-end;gap:0.4vw;min-height:0">
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:42%;background:var(--teal);border-radius:3px 3px 0 0"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">NYC</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:38%;background:var(--teal);border-radius:3px 3px 0 0;opacity:0.8"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">LA</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:68%;background:var(--teal);border-radius:3px 3px 0 0"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">IDW</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:35%;background:var(--teal);border-radius:3px 3px 0 0;opacity:0.7"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">SF</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:30%;background:var(--teal);border-radius:3px 3px 0 0;opacity:0.6"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">MIA</p></div>
+<!-- ROW 1: KPIs with sparkline context -->
+<div style="display:flex;gap:1vw">
+<div style="flex:1;background:rgba(238,234,217,0.05);border-radius:8px;padding:0.8vw 1vw;border-left:3px solid var(--teal)">
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.4);text-transform:uppercase;letter-spacing:0.08em">Awareness lift</p>
+<div style="display:flex;align-items:baseline;gap:0.5vw"><p style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--teal);line-height:1">+34%</p><p style="font-size:0.55rem;color:var(--teal)">+8% vs Q1</p></div>
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.3);margin-top:0.3vh">1 in 3 users shifted from unaware to aware</p>
+</div>
+<div style="flex:1;background:rgba(238,234,217,0.05);border-radius:8px;padding:0.8vw 1vw;border-left:3px solid var(--orange)">
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.4);text-transform:uppercase;letter-spacing:0.08em">Morning text CTR</p>
+<div style="display:flex;align-items:baseline;gap:0.5vw"><p style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--orange);line-height:1">52%</p><p style="font-size:0.55rem;color:var(--orange)">+12% vs Q1</p></div>
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.3);margin-top:0.3vh">Highest among "What's PrEP?" at 71%</p>
+</div>
+<div style="flex:1;background:rgba(238,234,217,0.05);border-radius:8px;padding:0.8vw 1vw;border-left:3px solid var(--amber)">
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.4);text-transform:uppercase;letter-spacing:0.08em">Completion rate</p>
+<div style="display:flex;align-items:baseline;gap:0.5vw"><p style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--amber);line-height:1">87%</p><p style="font-size:0.55rem;color:var(--amber)">steady</p></div>
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.3);margin-top:0.3vh">Drop-off at zip code step (8% exit)</p>
+</div>
+<div style="flex:1;background:rgba(238,234,217,0.05);border-radius:8px;padding:0.8vw 1vw;border-left:3px solid var(--skin)">
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.4);text-transform:uppercase;letter-spacing:0.08em">Resource follow-through</p>
+<div style="display:flex;align-items:baseline;gap:0.5vw"><p style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--skin);line-height:1">19%</p><p style="font-size:0.55rem;color:var(--skin)">+5% vs Q1</p></div>
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.3);margin-top:0.3vh">28% among first-time PrEP learners</p>
 </div>
 </div>
 
-<!-- CHART 2: Morning text CTR — ORANGE -->
-<div style="flex:1;background:rgba(76,48,13,0.02);border-radius:8px;padding:1vw 1vw 0.6vw;display:flex;flex-direction:column">
-<p style="font-size:0.5rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange);font-weight:600;margin-bottom:0.5vh">Morning text CTR</p>
-<div style="flex:1;display:flex;align-items:flex-end;gap:0.6vw;min-height:0">
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:71%;background:var(--orange);border-radius:3px 3px 0 0"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">New</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:54%;background:var(--orange);border-radius:3px 3px 0 0;opacity:0.7"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">Heard</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:38%;background:var(--orange);border-radius:3px 3px 0 0;opacity:0.45"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">On it</p></div>
+<!-- ROW 2: Two panels -->
+<div style="display:flex;gap:1vw;flex:1;min-height:0">
+
+<!-- LEFT: PrEP awareness % by event (vertical bars) -->
+<div style="flex:3;background:rgba(238,234,217,0.04);border-radius:8px;padding:1vw;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8vh">
+<p style="font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(238,234,217,0.5);font-weight:600">% already on PrEP by event</p>
+<p style="font-size:0.5rem;color:rgba(238,234,217,0.25);font-family:'JetBrains Mono',monospace">avg: 43%</p>
 </div>
+<div style="flex:1;display:flex;align-items:flex-end;gap:0.8vw;min-height:0">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:85%;height:68%;background:var(--teal);border-radius:4px 4px 0 0"></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--teal);margin-top:4px">68%</p><p style="font-size:0.5rem;color:rgba(238,234,217,0.4);margin-top:1px">IDWeek</p></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:85%;height:42%;background:var(--orange);border-radius:4px 4px 0 0"></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--orange);margin-top:4px">42%</p><p style="font-size:0.5rem;color:rgba(238,234,217,0.4);margin-top:1px">Freddie NYC</p></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:85%;height:38%;background:var(--orange);border-radius:4px 4px 0 0;opacity:0.75"></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--orange);margin-top:4px">38%</p><p style="font-size:0.5rem;color:rgba(238,234,217,0.4);margin-top:1px">Freddie LA</p></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:85%;height:35%;background:var(--amber);border-radius:4px 4px 0 0"></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--amber);margin-top:4px">35%</p><p style="font-size:0.5rem;color:rgba(238,234,217,0.4);margin-top:1px">Pride SF</p></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:85%;height:30%;background:var(--skin);border-radius:4px 4px 0 0"></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--skin);margin-top:4px">30%</p><p style="font-size:0.5rem;color:rgba(238,234,217,0.4);margin-top:1px">Pride MIA</p></div>
+</div>
+<p style="font-size:0.48rem;color:rgba(238,234,217,0.25);margin-top:0.5vh">HCP events skew 2x higher PrEP awareness than consumer events</p>
 </div>
 
-<!-- CHART 3: Completion rate — AMBER -->
-<div style="flex:1;background:rgba(76,48,13,0.02);border-radius:8px;padding:1vw 1vw 0.6vw;display:flex;flex-direction:column">
-<p style="font-size:0.5rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--amber);font-weight:600;margin-bottom:0.5vh">Completion rate</p>
-<div style="flex:1;display:flex;align-items:flex-end;gap:0.6vw;min-height:0">
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:64%;background:var(--amber);border-radius:3px 3px 0 0"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">New</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:82%;background:var(--amber);border-radius:3px 3px 0 0;opacity:0.8"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">Heard</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:91%;background:var(--amber);border-radius:3px 3px 0 0"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">On it</p></div>
+<!-- RIGHT: Two stacked panels -->
+<div style="flex:2;display:flex;flex-direction:column;gap:1vh">
+
+<!-- Morning text response by answer -->
+<div style="flex:1;background:rgba(238,234,217,0.04);border-radius:8px;padding:1vw;display:flex;flex-direction:column">
+<p style="font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(238,234,217,0.5);font-weight:600;margin-bottom:0.6vh">Morning text CTR by PrEP answer</p>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.5vh">
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.6);width:5vw;text-align:right">"What's PrEP?"</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:71%;height:100%;background:var(--orange);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--orange);width:2.5vw">71%</p></div>
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.4);width:5vw;text-align:right">"Heard of it"</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:54%;height:100%;background:var(--amber);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(238,234,217,0.4);width:2.5vw">54%</p></div>
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.4);width:5vw;text-align:right">"On it"</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:38%;height:100%;background:var(--teal);border-radius:3px;opacity:0.6"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(238,234,217,0.4);width:2.5vw">38%</p></div>
 </div>
+<p style="font-size:0.48rem;color:rgba(238,234,217,0.25);margin-top:0.3vh">Least-aware users are 1.9x more likely to engage with follow-up</p>
 </div>
 
-<!-- CHART 4: Follow-through — SKIN/BROWN -->
-<div style="flex:1;background:rgba(76,48,13,0.02);border-radius:8px;padding:1vw 1vw 0.6vw;display:flex;flex-direction:column">
-<p style="font-size:0.5rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--midbrown);font-weight:600;margin-bottom:0.5vh">Follow-through</p>
-<div style="flex:1;display:flex;align-items:flex-end;gap:0.4vw;min-height:0">
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:31%;background:var(--skin);border-radius:3px 3px 0 0"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">IDW</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:24%;background:var(--skin);border-radius:3px 3px 0 0;opacity:0.8"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">SF</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:19%;background:var(--skin);border-radius:3px 3px 0 0;opacity:0.65"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">NYC</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:16%;background:var(--skin);border-radius:3px 3px 0 0;opacity:0.5"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">LA</p></div>
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%"><div style="flex:1"></div><div style="width:100%;height:12%;background:var(--skin);border-radius:3px 3px 0 0;opacity:0.4"></div><p style="font-size:0.45rem;color:var(--dim);margin-top:3px;white-space:nowrap">MIA</p></div>
+<!-- Resource follow-through by event (horizontal) -->
+<div style="flex:1;background:rgba(238,234,217,0.04);border-radius:8px;padding:1vw;display:flex;flex-direction:column">
+<p style="font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(238,234,217,0.5);font-weight:600;margin-bottom:0.6vh">Resource follow-through by event</p>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.5vh">
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.6);width:5vw;text-align:right">IDWeek</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:31%;height:100%;background:var(--teal);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--teal);width:2.5vw">31%</p></div>
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.4);width:5vw;text-align:right">Pride SF</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:24%;height:100%;background:var(--amber);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(238,234,217,0.4);width:2.5vw">24%</p></div>
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.4);width:5vw;text-align:right">Freddie NYC</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:19%;height:100%;background:var(--orange);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(238,234,217,0.4);width:2.5vw">19%</p></div>
+<div style="display:flex;align-items:center;gap:0.5vw"><p style="font-size:0.55rem;color:rgba(238,234,217,0.4);width:5vw;text-align:right">Freddie LA</p><div style="flex:1;height:12px;background:rgba(238,234,217,0.06);border-radius:3px;overflow:hidden"><div style="width:16%;height:100%;background:var(--skin);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(238,234,217,0.4);width:2.5vw">16%</p></div>
 </div>
+<p style="font-size:0.48rem;color:rgba(238,234,217,0.25);margin-top:0.3vh">HCP attendees convert to action at 1.6x the rate of consumer events</p>
 </div>
 
+</div>
 </div>
 
 </div>
