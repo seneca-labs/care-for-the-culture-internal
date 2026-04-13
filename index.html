@@ -219,10 +219,10 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 </div>
-<!-- RIGHT: Phone images overlapping -->
-<div style="position:relative;flex-shrink:0;width:min(380px,28vw);height:min(520px,65vh)">
-<img src="assets/problem-phone-1.png" alt="Anonymous profile" style="position:absolute;top:0;left:0;height:min(440px,55vh);width:auto;border-radius:16px;display:block;box-shadow:0 16px 48px rgba(76,48,13,0.2);z-index:1">
-<img src="assets/problem-phone-2.png" alt="Health status on profile" style="position:absolute;bottom:0;right:0;height:min(440px,55vh);width:auto;border-radius:16px;display:block;box-shadow:0 20px 60px rgba(76,48,13,0.25);z-index:2">
+<!-- RIGHT: Phone images stacked, corners overlapping, second tilted -->
+<div style="position:relative;flex-shrink:0;width:min(320px,24vw);height:min(540px,68vh)">
+<img src="assets/problem-phone-1.png" alt="Anonymous profile" style="position:absolute;top:0;left:0;height:min(400px,50vh);width:auto;border-radius:16px;display:block;box-shadow:0 12px 40px rgba(76,48,13,0.18);z-index:1">
+<img src="assets/problem-phone-2.png" alt="Health status on profile" style="position:absolute;bottom:0;right:-1vw;height:min(400px,50vh);width:auto;border-radius:16px;display:block;box-shadow:0 16px 50px rgba(76,48,13,0.22);z-index:2;transform:rotate(3deg)">
 </div>
 </div>
 </div>
@@ -844,44 +844,9 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 21: PRODUCT CUSTOMIZATION ==================== -->
-<div class="slide slide-top" data-slide="21" style="padding-top:6vh">
-<div class="stagger">
-<p class="label orange">SCALE</p>
-<div class="gap-sm"></div>
-<h2>one platform. every room.</h2>
-<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);margin-top:0.8vh;white-space:nowrap">Same backend, same data engine. Only the surface changes.</p>
-<div class="gap"></div>
-<div class="g3" style="gap:2.5vw;align-items:start">
-<div>
-<div style="width:100%;aspect-ratio:9/16;max-height:46vh;border:2px dashed var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(76,48,13,0.02);margin-bottom:1vh">
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--dim);opacity:0.4;text-transform:uppercase;letter-spacing:0.1em;text-align:center;padding:1rem">[FREDDY MODE<br>UI MOCKUP]</p>
-</div>
-<p style="font-size:1rem;font-weight:600;color:var(--text)">Freddie Mode</p>
-<p style="font-size:0.85rem;color:var(--dim);line-height:1.45;margin-top:0.3vh">Warm nightlife aesthetic. Captures Instagram. CTA: "Share your card."</p>
-</div>
-<div>
-<div style="width:100%;aspect-ratio:9/16;max-height:46vh;border:2px dashed var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(76,48,13,0.02);margin-bottom:1vh">
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--dim);opacity:0.4;text-transform:uppercase;letter-spacing:0.1em;text-align:center;padding:1rem">[HCP MODE<br>UI MOCKUP]</p>
-</div>
-<p style="font-size:1rem;font-weight:600;color:var(--text)">HCP Mode</p>
-<p style="font-size:0.85rem;color:var(--dim);line-height:1.45;margin-top:0.3vh">Clinical, data-forward, cooler palette. Captures LinkedIn. CTA: "See prescribing data for your region."</p>
-</div>
-<div>
-<div style="width:100%;aspect-ratio:9/16;max-height:46vh;border:2px dashed var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(76,48,13,0.02);margin-bottom:1vh">
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--dim);opacity:0.4;text-transform:uppercase;letter-spacing:0.1em;text-align:center;padding:1rem">[COMMUNITY MODE<br>UI MOCKUP]</p>
-</div>
-<p style="font-size:1rem;font-weight:600;color:var(--text)">Community Mode</p>
-<p style="font-size:0.85rem;color:var(--dim);line-height:1.45;margin-top:0.3vh">Softer, advocacy-forward, warmer editorial. Captures org affiliation. CTA: "See your neighborhood's gap."</p>
-</div>
-</div>
-<div style="height:1px;background:rgba(76,48,13,0.1);margin:2vh 0 1.5vh"></div>
-<p style="font-size:0.9rem;color:var(--dim);line-height:1.5">The kiosk ships with these three modes. New contexts are a config change, not a rebuild.</p>
-</div>
-</div>
 
 <!-- ==================== SLIDE 22: SECTION, THE BACKEND ==================== -->
-<div class="slide section-divider divider-amber" data-slide="22" style="padding:0">
+<div class="slide section-divider divider-amber" data-slide="21" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num">04</p>
@@ -891,7 +856,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 23: HOW DATA MOVES ==================== -->
-<div class="slide slide-top" data-slide="23" id="data-moves-slide">
+<div class="slide slide-top" data-slide="22" id="data-moves-slide">
 <div class="stagger">
 <p class="label amber">SYSTEM</p>
 <div class="gap-sm"></div>
@@ -997,7 +962,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 24: METHODOLOGY + DATA BOUNDARIES ==================== -->
-<div class="slide slide-top" data-slide="24">
+<div class="slide slide-top" data-slide="23">
 <div class="stagger">
 <p class="label teal">METHODOLOGY</p>
 <div class="gap-sm"></div>
@@ -1026,7 +991,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 25: SECTION, LEGAL ==================== -->
-<div class="slide section-divider divider-amber" data-slide="25" style="padding:0">
+<div class="slide section-divider divider-amber" data-slide="24" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num">05</p>
@@ -1036,7 +1001,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 26: LEGAL, DATA ==================== -->
-<div class="slide" data-slide="26">
+<div class="slide" data-slide="25">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1066,7 +1031,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 27: LEGAL, PRIVACY ==================== -->
-<div class="slide slide-top" data-slide="27">
+<div class="slide slide-top" data-slide="26">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1112,7 +1077,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 28: RETENTION + CLAIMS ==================== -->
-<div class="slide" data-slide="28">
+<div class="slide" data-slide="27">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1143,7 +1108,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 29: OPT-IN / OPT-OUT LANGUAGE ==================== -->
-<div class="slide slide-top" data-slide="29" style="padding-top:6vh;padding-bottom:4vh">
+<div class="slide slide-top" data-slide="28" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1181,7 +1146,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 30: RISK MITIGATION ==================== -->
-<div class="slide slide-top" data-slide="30" style="padding-top:6vh;padding-bottom:4vh">
+<div class="slide slide-top" data-slide="29" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1226,7 +1191,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 31: TERMS OF SERVICE ==================== -->
-<div class="slide slide-top" data-slide="31" style="padding-top:6vh">
+<div class="slide slide-top" data-slide="30" style="padding-top:6vh">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1269,7 +1234,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 
 <!-- ==================== SLIDE 32: THANK YOU ==================== -->
-<div class="slide" data-slide="32" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
+<div class="slide" data-slide="31" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
 <div class="stagger">
 <h1 style="font-size:clamp(5rem,10vw,10rem);color:var(--lime);line-height:0.95">Thank<br>You.</h1>
 <div style="height:6vh"></div>
@@ -1283,7 +1248,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <button class="nav-btn" onclick="navigate(-1)">&#8592;</button>
 <button class="nav-btn" onclick="navigate(1)">&#8594;</button>
 </div>
-<div class="counter" id="counter">1 / 33</div>
+<div class="counter" id="counter">1 / 32</div>
 
 <script>
 (function(){
