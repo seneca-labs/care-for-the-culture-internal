@@ -157,6 +157,11 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 .slide.active .anim-bar:nth-child(3){animation-delay:500ms}
 .slide.active .anim-bar:nth-child(4){animation-delay:650ms}
 .slide.active .anim-bar:nth-child(5){animation-delay:800ms}
+
+/* dashboard dots */
+.dash-dot{position:absolute;width:var(--dot-size,12px);height:var(--dot-size,12px);border-radius:50%;background:var(--dot-color);opacity:0;transform:scale(0)}
+.slide.active .dash-dot{animation:dot-pulse 6s ease infinite}
+@keyframes dot-pulse{0%{opacity:0;transform:scale(0)}10%{opacity:0.85;transform:scale(1)}80%{opacity:0.85;transform:scale(1)}90%{opacity:0.6;transform:scale(0.9)}100%{opacity:0.85;transform:scale(1)}}
 </style>
 </head>
 <body>
@@ -214,18 +219,92 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 3: PRODUCT OVERVIEW ==================== -->
-<div class="slide" data-slide="3">
+<!-- ==================== SLIDE: WHAT WE CAN WORK WITH ==================== -->
+<div class="slide slide-top" data-slide="3" style="padding-top:6vh">
+<div class="stagger">
+<p class="label coral">THE DATA</p>
+<div class="gap-sm"></div>
+<h2>what we can work with</h2>
+<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">The data comes from AIDSVu.org, broken down by county. For each area we have:</p>
+<div class="gap"></div>
+<div class="g3" style="gap:2vw;align-items:start">
+<div class="card-sm" style="border-top:3px solid var(--orange)">
+<h3 style="font-size:1rem;margin-bottom:0.5vh">Prevalence</h3>
+<p style="font-size:0.9rem;color:var(--muted);line-height:1.55">How many people are living with HIV. The full weight of the epidemic in that place.</p>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--teal)">
+<h3 style="font-size:1rem;margin-bottom:0.5vh">New diagnoses</h3>
+<p style="font-size:0.9rem;color:var(--muted);line-height:1.55">What happened this year. What's active right now.</p>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--orange)">
+<h3 style="font-size:1rem;margin-bottom:0.5vh">PrEP coverage</h3>
+<p style="font-size:0.9rem;color:var(--muted);line-height:1.55">Who's on PrEP. How many people in that area are using it.</p>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--teal)">
+<h3 style="font-size:1rem;margin-bottom:0.5vh">The gap</h3>
+<p style="font-size:0.9rem;color:var(--muted);line-height:1.55">The distance between who's getting diagnosed and who's on PrEP. Where the system loses people.</p>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--orange)">
+<h3 style="font-size:1rem;margin-bottom:0.5vh">Racial breakdown</h3>
+<p style="font-size:0.9rem;color:var(--muted);line-height:1.55">Splits by race, sex, age, and transmission category. The disparities are stark.</p>
+</div>
+<div class="card-sm" style="border-top:3px solid var(--teal)">
+<h3 style="font-size:1rem;margin-bottom:0.5vh">Personal answers</h3>
+<p style="font-size:0.9rem;color:var(--muted);line-height:1.55">Each participant's own prevention status. Collected privately, used for follow-up.</p>
+</div>
+</div>
+<div class="gap"></div>
+<p style="font-size:clamp(1.1rem,1.35vw,1.35rem);color:var(--muted);line-height:1.7;max-width:64ch">We can show someone from Brooklyn that 1,225 per 100K are living with HIV, that 542 per 100K are on PrEP, and that for every new diagnosis, 24.6 people are on PrEP. We can show someone from the Bronx that same ratio is 6.3. We can make that difference visible.</p>
+</div>
+</div>
+
+<!-- ==================== SLIDE: FROM FEAR TO COMMUNITY ==================== -->
+<div class="slide" data-slide="4">
+<div class="stagger">
+<p class="label coral">STRATEGY</p>
+<div class="gap-sm"></div>
+<h2>from fear to community</h2>
+<div class="gap"></div>
+<div class="g2" style="gap:2.5vw;align-items:start">
+<div class="card" style="border-top:4px solid var(--coral)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral);font-weight:600;margin-bottom:1vh">THE OLD APPROACH</p>
+<p style="font-size:clamp(1.1rem,1.3vw,1.3rem);color:var(--text);font-weight:600;line-height:1.4;margin-bottom:1.5vh">Show people how many HIV cases are near them. Hope fear motivates action.</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.6">This is what the original "heat map on a kiosk" concept was doing. It reads as a CDC dashboard at a drag party. Nobody posts a heat map of HIV prevalence in their neighborhood.</p>
+</div>
+<div class="card" style="border-top:4px solid var(--teal)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);font-weight:600;margin-bottom:1vh">THE NEW APPROACH</p>
+<p style="font-size:clamp(1.1rem,1.3vw,1.3rem);color:var(--text);font-weight:600;line-height:1.4;margin-bottom:1.5vh">Show people where their community stands, where the gap is, and how they fit into the picture.</p>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.6">Make prevention feel like something the community is building together. The shareable output has zero health data on it. The actual data travels through private channels the next morning, when people can absorb it.</p>
+</div>
+</div>
+<div class="gap"></div>
+<p style="font-size:clamp(1.1rem,1.35vw,1.35rem);color:var(--muted);line-height:1.7;max-width:64ch">The data is not the destination. It's the context that makes the experience meaningful. In one concept, the data is the visual itself. In the other, the data is the door you walk through to get to the social experience. Both reframe from diagnosis to participation.</p>
+</div>
+</div>
+
+<!-- ==================== SLIDE 5: PRODUCT OVERVIEW ==================== -->
+<div class="slide" data-slide="5">
 <div class="stagger">
 <p class="label coral">OVERVIEW</p>
 <div class="gap-sm"></div>
 <h2>the solution</h2>
-<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:1vh;max-width:none;white-space:nowrap">The Feed integrates PrEP and HIV prevention data into what people are already doing on their phones.</p>
+<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">Not a kiosk. Not an app. A system.</p>
 <div class="gap"></div>
-<div style="width:100%;height:32vh;border:2px dashed var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(76,48,13,0.02)">
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--dim);opacity:0.4;text-transform:uppercase;letter-spacing:0.12em">[HERO MOCKUP, KIOSK HOME SCREEN]</p>
+<!-- Two Surfaces -->
+<div class="g2" style="gap:2.5vw;margin-bottom:2.5vh">
+<div class="card" style="border-top:4px solid var(--orange)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);font-weight:600;margin-bottom:0.8vh">ENTRY POINT</p>
+<h3 style="margin-bottom:0.8vh">The kiosk</h3>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.6">Physical station at the party. Photos happen here, data gets collected, cards get created. Multiple kiosks across the venue. The ritual.</p>
 </div>
-<div class="gap"></div>
+<div class="card" style="border-top:4px solid var(--teal)">
+<p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);font-weight:600;margin-bottom:0.8vh">EXTENSION</p>
+<h3 style="margin-bottom:0.8vh">The phone</h3>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.6">A QR code at the kiosk opens the same feed in your mobile browser. No app download. Browse from the dance floor, the afterparty, or the next morning. The utility.</p>
+</div>
+</div>
+<p style="font-size:0.85rem;color:var(--dim);margin-bottom:2.5vh">Both surfaces read from the same backend. A photo taken at the kiosk appears on every phone feed within seconds.</p>
+<!-- Three pillars -->
 <div class="g3" style="gap:3vw">
 <div>
 <h3 style="font-size:1.05rem;margin-bottom:0.5vh">Entry</h3>
@@ -246,103 +325,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 4: THE DATA ==================== -->
-<div class="slide" data-slide="4" id="data-viz-slide" style="justify-content:center;align-items:stretch;padding:3vh 8vw 2vh">
-<div style="display:flex;flex-direction:column">
-<!-- TITLE ROW -->
-<div style="margin-bottom:1vh">
-<p class="label coral">OVERVIEW</p>
-<div class="gap-sm"></div>
-<h2>the data</h2>
-<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">Here's what AIDSVu tells us.</p>
-</div>
-
-<!-- MAIN VIZ: 3 stat cards | donut | 3 bar charts -->
-<div style="display:flex;align-items:stretch;gap:1.5vw">
-
-<!-- LEFT: Stacked stat cards -->
-<div style="flex-shrink:0;width:13vw;display:flex;flex-direction:column;gap:1.2vh;justify-content:center">
-<div class="anim-card" style="background:var(--surface-light);border:1px solid var(--border);border-radius:10px;padding:1.4vw 1.6vw;border-left:3px solid var(--orange)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(2rem,3.2vw,3.2rem);color:var(--text);line-height:1">1.13M</p>
-<p style="font-size:0.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">living with HIV</p>
-</div>
-<div class="anim-card" style="background:var(--surface-light);border:1px solid var(--border);border-radius:10px;padding:1.4vw 1.6vw;border-left:3px solid var(--orange)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(2rem,3.2vw,3.2rem);color:var(--text);line-height:1">39,182</p>
-<p style="font-size:0.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">new diagnoses, 2023</p>
-</div>
-<div class="anim-card" style="background:var(--surface-light);border:1px solid var(--border);border-radius:10px;padding:1.4vw 1.6vw;border-left:3px solid var(--teal)">
-<p style="font-family:'Anton',sans-serif;font-size:clamp(2rem,3.2vw,3.2rem);color:var(--teal);line-height:1">505,993</p>
-<p style="font-size:0.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">on PrEP nationally</p>
-</div>
-</div>
-
-<!-- CENTER: Donut -->
-<div style="flex-shrink:0;width:14vw;display:flex;flex-direction:column;align-items:center;justify-content:center">
-<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:1vh">The PrEP gap</p>
-<div style="position:relative;width:170px;height:170px">
-<svg viewBox="0 0 120 120" style="width:100%;height:100%;transform:rotate(-90deg)">
-<circle cx="60" cy="60" r="52" fill="none" stroke="rgba(76,48,13,0.06)" stroke-width="14"/>
-<circle cx="60" cy="60" r="52" fill="none" stroke="var(--orange)" stroke-width="14" stroke-linecap="round" class="anim-ring" style="--ring-circ:327;--ring-offset:214;stroke-dasharray:327;stroke-dashoffset:327"/>
-<circle cx="60" cy="60" r="52" fill="none" stroke="var(--teal)" stroke-width="14" stroke-linecap="round" class="anim-ring" style="--ring-circ:327;--ring-offset:295;stroke-dasharray:327;stroke-dashoffset:327;animation-delay:400ms"/>
-</svg>
-<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
-<p style="font-family:'Anton',sans-serif;font-size:2.2rem;color:var(--text);line-height:1">3:1</p>
-<p style="font-size:0.6rem;color:var(--dim);margin-top:2px">DIAGNOSES<br>TO PREP</p>
-</div>
-</div>
-<div style="display:flex;gap:1vw;margin-top:1vh">
-<div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--orange)"></div><p style="font-size:0.65rem;color:var(--dim)">HIV</p></div>
-<div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--teal)"></div><p style="font-size:0.65rem;color:var(--dim)">PrEP</p></div>
-</div>
-<p style="font-size:0.72rem;color:var(--dim);margin-top:1.2vh;text-align:center;line-height:1.4;max-width:14vw">For every person on PrEP, three are diagnosed without it.</p>
-</div>
-
-<!-- RIGHT: 3 bar charts stacked -->
-<div style="flex:1;display:flex;flex-direction:column;gap:2.5vh;min-width:0;justify-content:center">
-
-<!-- BAR CHART 1: NYC Boroughs -->
-<div>
-<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.8vh">NYC boroughs (per 100K)</p>
-<div style="display:flex;flex-direction:column;gap:0.5vh">
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--text);font-weight:600;width:5.5vw;text-align:right;flex-shrink:0">Bronx</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:100%;height:100%;background:linear-gradient(90deg,var(--orange),var(--coral));border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange);width:3vw;font-weight:600">2,438</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Manhattan</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:73%;height:100%;background:var(--orange);border-radius:3px;opacity:0.8"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">1,785</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Brooklyn</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:50%;height:100%;background:var(--orange);border-radius:3px;opacity:0.65"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">1,225</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Queens</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:36%;height:100%;background:var(--orange);border-radius:3px;opacity:0.5"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">871</p></div>
-</div>
-</div>
-
-<!-- BAR CHART 2: LA County -->
-<div>
-<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.8vh">LA County</p>
-<div style="display:flex;flex-direction:column;gap:0.5vh">
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--text);font-weight:600;width:5.5vw;text-align:right;flex-shrink:0">Prevalence</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:85%;height:100%;background:var(--orange);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange);width:3vw;font-weight:600">622</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">PrEP</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:44%;height:100%;background:var(--teal);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--teal);width:3vw">323</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">New DX</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:3%;height:100%;background:var(--coral);border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">20</p></div>
-</div>
-<p style="font-size:0.62rem;color:var(--dim);margin-top:0.4vh">51,652 people living with HIV. 26,862 on PrEP. 1,627 new diagnoses.</p>
-</div>
-
-<!-- BAR CHART 3: Prevalence gap by state -->
-<div>
-<p style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.8vh">State prevalence rate (per 100K)</p>
-<div style="display:flex;flex-direction:column;gap:0.5vh">
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--text);font-weight:600;width:5.5vw;text-align:right;flex-shrink:0">D.C.</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:100%;height:100%;background:linear-gradient(90deg,var(--orange),var(--coral));border-radius:3px"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange);width:3vw;font-weight:600">2,286</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">New York</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:33%;height:100%;background:var(--orange);border-radius:3px;opacity:0.8"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">753</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Georgia</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:29%;height:100%;background:var(--orange);border-radius:3px;opacity:0.7"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">667</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Maryland</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:28%;height:100%;background:var(--orange);border-radius:3px;opacity:0.6"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">651</p></div>
-<div style="display:flex;align-items:center;gap:0.6vw"><p style="font-size:0.72rem;color:var(--muted);width:5.5vw;text-align:right;flex-shrink:0">Florida</p><div style="flex:1;height:16px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:28%;height:100%;background:var(--orange);border-radius:3px;opacity:0.5"></div></div><p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);width:3vw">631</p></div>
-</div>
-</div>
-
-</div>
-</div>
-<div style="height:1px;background:rgba(76,48,13,0.1);margin:1vh 0 0.5vh"></div>
-<p style="font-size:0.72rem;color:var(--dim)">AIDSVu / Emory University, 2023. All county and state level.</p>
-</div>
-</div>
-
-<!-- ==================== SLIDE 5: THE USER FLOW ==================== -->
-<div class="slide slide-top" data-slide="5" id="flow-slide">
+<!-- ==================== SLIDE 6: THE USER FLOW ==================== -->
+<div class="slide slide-top" data-slide="6" id="flow-slide">
 <div class="stagger">
 <p class="label coral">THE JOURNEY</p>
 <div class="gap-sm"></div>
@@ -383,8 +367,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 6: SECTION, THE PRODUCT ==================== -->
-<div class="slide section-divider divider-teal" data-slide="6" style="padding:0">
+<!-- ==================== SLIDE 7: SECTION, THE PRODUCT ==================== -->
+<div class="slide section-divider divider-teal" data-slide="7" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num" style="color:rgba(238,234,217,0.4)">02</p>
@@ -393,8 +377,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 7: ONBOARDING ==================== -->
-<div class="slide" data-slide="7">
+<!-- ==================== SLIDE 8: ONBOARDING ==================== -->
+<div class="slide" data-slide="8">
 <div class="stagger">
 <p class="label teal">DEMO</p>
 <div class="gap-sm"></div>
@@ -410,8 +394,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 8: CLOSE THE GAP ==================== -->
-<div class="slide" data-slide="8">
+<!-- ==================== SLIDE 9: CLOSE THE GAP ==================== -->
+<div class="slide" data-slide="9">
 <div class="stagger">
 <p class="label teal">DATA</p>
 <div class="gap-sm"></div>
@@ -428,8 +412,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 9: SEE YOUR COMMUNITY ==================== -->
-<div class="slide" data-slide="9">
+<!-- ==================== SLIDE 10: SEE YOUR COMMUNITY ==================== -->
+<div class="slide" data-slide="10">
 <div class="stagger">
 <p class="label teal">DATA</p>
 <div class="gap-sm"></div>
@@ -446,8 +430,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 10: SEE YOUR NEIGHBORHOOD ==================== -->
-<div class="slide slide-top" data-slide="10" style="padding-top:6vh;padding-bottom:4vh">
+<!-- ==================== SLIDE 11: SEE YOUR NEIGHBORHOOD ==================== -->
+<div class="slide slide-top" data-slide="11" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label teal">DATA</p>
 <div class="gap-sm"></div>
@@ -468,8 +452,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 11: OTHER WAYS WE CONSIDERED ==================== -->
-<div class="slide slide-top" data-slide="11" style="padding-top:6vh">
+<!-- ==================== SLIDE 12: OTHER WAYS WE CONSIDERED ==================== -->
+<div class="slide slide-top" data-slide="12" style="padding-top:6vh">
 <div class="stagger">
 <p class="label teal">EXPLORATION</p>
 <div class="gap-sm"></div>
@@ -505,8 +489,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 12: WHAT YOU TAKE HOME ==================== -->
-<div class="slide slide-top" data-slide="12">
+<!-- ==================== SLIDE 13: WHAT YOU TAKE HOME ==================== -->
+<div class="slide slide-top" data-slide="13">
 <div class="stagger">
 <p class="label teal">SIGNALS</p>
 <div class="gap-sm"></div>
@@ -545,8 +529,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 13: ANSWERS + SMS PREVIEW ==================== -->
-<div class="slide slide-top" data-slide="13" id="answers-slide" style="padding-top:6vh;padding-bottom:4vh">
+<!-- ==================== SLIDE 14: ANSWERS + SMS PREVIEW ==================== -->
+<div class="slide slide-top" data-slide="14" id="answers-slide" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label teal">PERSONALIZATION</p>
 <div class="gap-sm"></div>
@@ -602,8 +586,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 14: HOME SCREEN ==================== -->
-<div class="slide" data-slide="14">
+<!-- ==================== SLIDE 15: HOME SCREEN ==================== -->
+<div class="slide" data-slide="15">
 <div class="stagger">
 <p class="label teal">INTERFACE</p>
 <div class="gap-sm"></div>
@@ -635,8 +619,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 15: SECTION, SCALE ==================== -->
-<div class="slide section-divider" data-slide="15" data-dark="true" style="background:var(--darkbrown);padding:0">
+<!-- ==================== SLIDE 16: SECTION, SCALE ==================== -->
+<div class="slide section-divider" data-slide="16" data-dark="true" style="background:var(--darkbrown);padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num" style="color:rgba(238,234,217,0.4)">03</p>
@@ -645,8 +629,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 16: ACTIVATION CONTEXTS ==================== -->
-<div class="slide" data-slide="16" style="padding-top:8vh">
+<!-- ==================== SLIDE 17: ACTIVATION CONTEXTS ==================== -->
+<div class="slide" data-slide="17" style="padding-top:8vh">
 <div class="stagger">
 <p class="label orange">SCALE</p>
 <div class="gap-sm"></div>
@@ -686,197 +670,145 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 17: HOW WE TRACK IMPACT ==================== -->
-<div class="slide slide-top" data-slide="17" style="padding-top:4vh;padding-bottom:1vh">
-<div>
-<p class="label orange">SCALE</p>
-<div class="gap-sm"></div>
-<h2>how we track impact</h2>
-<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);margin-top:0.5vh;white-space:nowrap">Four metrics per event, plus answer distribution by context.</p>
-</div>
-<div style="height:1.5vh"></div>
-
-<!-- TOP ROW: Circle gauge + 3 bar charts -->
-<div style="display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:2vw;align-items:start">
-
-<!-- 1. AWARENESS LIFT — Circle gauge -->
-<div style="text-align:center">
-<p style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);font-weight:600;margin-bottom:0.8vh">Awareness lift</p>
-<div style="position:relative;width:150px;height:150px;margin:0 auto">
-<svg viewBox="0 0 120 120" style="width:100%;height:100%;transform:rotate(-90deg)">
-<circle cx="60" cy="60" r="50" fill="none" stroke="rgba(76,48,13,0.06)" stroke-width="10"/>
-<circle cx="60" cy="60" r="50" fill="none" stroke="var(--teal)" stroke-width="10" stroke-linecap="round" class="anim-ring" style="--ring-circ:314;--ring-offset:207;stroke-dasharray:314;stroke-dashoffset:314"/>
-</svg>
-<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
-<p style="font-family:'Anton',sans-serif;font-size:2.4rem;color:var(--teal);line-height:1">+34%</p>
-</div>
-</div>
-<p style="font-size:0.72rem;color:var(--dim);margin-top:0.8vh;max-width:150px;margin-left:auto;margin-right:auto;line-height:1.35">moved from "what's PrEP" to "heard of it" or higher</p>
-</div>
-
-<!-- 2. MORNING TEXT — Bar chart -->
-<div>
-<p style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--orange);font-weight:600;margin-bottom:0.8vh">Morning text click-through</p>
-<div style="display:flex;flex-direction:column;gap:0.6vh">
-<div><p style="font-size:0.68rem;color:var(--text);font-weight:600;margin-bottom:2px">"What's PrEP?" <span style="font-family:'JetBrains Mono',monospace;color:var(--teal);float:right">71%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:71%;height:100%;background:var(--teal);border-radius:3px"></div></div></div>
-<div><p style="font-size:0.68rem;color:var(--muted);margin-bottom:2px">"Heard of it" <span style="font-family:'JetBrains Mono',monospace;color:var(--dim);float:right">54%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:54%;height:100%;background:var(--orange);border-radius:3px;opacity:0.7"></div></div></div>
-<div><p style="font-size:0.68rem;color:var(--muted);margin-bottom:2px">"On it" <span style="font-family:'JetBrains Mono',monospace;color:var(--dim);float:right">38%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:38%;height:100%;background:var(--dim);border-radius:3px;opacity:0.4"></div></div></div>
-</div>
-</div>
-
-<!-- 3. COMPLETION — Bar chart -->
-<div>
-<p style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);font-weight:600;margin-bottom:0.8vh">Completion rate</p>
-<div style="display:flex;flex-direction:column;gap:0.6vh">
-<div><p style="font-size:0.68rem;color:var(--text);font-weight:600;margin-bottom:2px">"What's PrEP?" <span style="font-family:'JetBrains Mono',monospace;color:var(--teal);float:right">64%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:64%;height:100%;background:var(--teal);border-radius:3px"></div></div></div>
-<div><p style="font-size:0.68rem;color:var(--muted);margin-bottom:2px">"Heard of it" <span style="font-family:'JetBrains Mono',monospace;color:var(--dim);float:right">82%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:82%;height:100%;background:var(--teal);border-radius:3px;opacity:0.7"></div></div></div>
-<div><p style="font-size:0.68rem;color:var(--muted);margin-bottom:2px">"On it" <span style="font-family:'JetBrains Mono',monospace;color:var(--dim);float:right">91%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:91%;height:100%;background:var(--teal);border-radius:3px;opacity:0.5"></div></div></div>
-</div>
-</div>
-
-<!-- 4. FOLLOW-THROUGH — Bar chart -->
-<div>
-<p style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--orange);font-weight:600;margin-bottom:0.8vh">Resource follow-through</p>
-<div style="display:flex;flex-direction:column;gap:0.6vh">
-<div><p style="font-size:0.68rem;color:var(--text);font-weight:600;margin-bottom:2px">"What's PrEP?" <span style="font-family:'JetBrains Mono',monospace;color:var(--orange);float:right">28%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:28%;height:100%;background:var(--orange);border-radius:3px"></div></div></div>
-<div><p style="font-size:0.68rem;color:var(--muted);margin-bottom:2px">"Heard of it" <span style="font-family:'JetBrains Mono',monospace;color:var(--dim);float:right">19%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:19%;height:100%;background:var(--orange);border-radius:3px;opacity:0.6"></div></div></div>
-<div><p style="font-size:0.68rem;color:var(--muted);margin-bottom:2px">"On it" <span style="font-family:'JetBrains Mono',monospace;color:var(--dim);float:right">11%</span></p><div style="height:26px;background:rgba(76,48,13,0.04);border-radius:3px;overflow:hidden"><div class="anim-bar" style="--bar-w:11%;height:100%;background:var(--orange);border-radius:3px;opacity:0.35"></div></div></div>
-</div>
-</div>
-
-</div>
-
-<div style="height:1.5vh"></div>
-
-<!-- BOTTOM: Answer breakdown by event type — stacked area/dot chart -->
-<div style="background:var(--surface-light);border:1px solid var(--border);border-radius:12px;padding:1.8vw 2vw">
-<p style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:1.5vh">Answer distribution by event type</p>
-<!-- Chart area with fixed pixel heights for stacked bars -->
-<div style="display:flex;gap:2vw;margin-left:3vw;align-items:flex-end;height:32vh;position:relative">
-<!-- Y-axis -->
-<div style="position:absolute;left:-3vw;top:0;bottom:0;width:2.5vw;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none">
-<p style="font-size:0.55rem;color:var(--dim);font-family:'JetBrains Mono',monospace;text-align:right">100%</p>
-<p style="font-size:0.55rem;color:var(--dim);font-family:'JetBrains Mono',monospace;text-align:right">50%</p>
-<p style="font-size:0.55rem;color:var(--dim);font-family:'JetBrains Mono',monospace;text-align:right">0%</p>
-</div>
-<!-- Grid lines -->
-<div style="position:absolute;left:0;right:0;top:0;height:1px;background:rgba(76,48,13,0.06)"></div>
-<div style="position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(76,48,13,0.06)"></div>
-<div style="position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(76,48,13,0.08)"></div>
-<!-- Freddie: 42/31/18/9 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%">
-<div style="width:80%;flex:1;display:flex;flex-direction:column;gap:1px">
-<div style="flex:42;background:var(--teal);border-radius:3px 3px 0 0;min-height:0"></div>
-<div style="flex:31;background:var(--orange);opacity:0.75;min-height:0"></div>
-<div style="flex:18;background:var(--amber);min-height:0"></div>
-<div style="flex:9;background:var(--dim);opacity:0.3;border-radius:0 0 3px 3px;min-height:0"></div>
-</div>
-<p style="font-size:0.65rem;color:var(--text);font-weight:600;margin-top:0.5vh">Freddie</p>
-</div>
-<!-- HCP: 68/20/8/4 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%">
-<div style="width:80%;flex:1;display:flex;flex-direction:column;gap:1px">
-<div style="flex:68;background:var(--teal);border-radius:3px 3px 0 0;min-height:0"></div>
-<div style="flex:20;background:var(--orange);opacity:0.75;min-height:0"></div>
-<div style="flex:8;background:var(--amber);min-height:0"></div>
-<div style="flex:4;background:var(--dim);opacity:0.3;border-radius:0 0 3px 3px;min-height:0"></div>
-</div>
-<p style="font-size:0.65rem;color:var(--text);font-weight:600;margin-top:0.5vh">HCP</p>
-</div>
-<!-- AIDS Walk: 35/28/25/12 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%">
-<div style="width:80%;flex:1;display:flex;flex-direction:column;gap:1px">
-<div style="flex:35;background:var(--teal);border-radius:3px 3px 0 0;min-height:0"></div>
-<div style="flex:28;background:var(--orange);opacity:0.75;min-height:0"></div>
-<div style="flex:25;background:var(--amber);min-height:0"></div>
-<div style="flex:12;background:var(--dim);opacity:0.3;border-radius:0 0 3px 3px;min-height:0"></div>
-</div>
-<p style="font-size:0.65rem;color:var(--text);font-weight:600;margin-top:0.5vh">AIDS Walk</p>
-</div>
-<!-- Pride: 38/25/27/10 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%">
-<div style="width:80%;flex:1;display:flex;flex-direction:column;gap:1px">
-<div style="flex:38;background:var(--teal);border-radius:3px 3px 0 0;min-height:0"></div>
-<div style="flex:25;background:var(--orange);opacity:0.75;min-height:0"></div>
-<div style="flex:27;background:var(--amber);min-height:0"></div>
-<div style="flex:10;background:var(--dim);opacity:0.3;border-radius:0 0 3px 3px;min-height:0"></div>
-</div>
-<p style="font-size:0.65rem;color:var(--text);font-weight:600;margin-top:0.5vh">Pride</p>
-</div>
-<!-- Festival: 22/30/35/13 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%">
-<div style="width:80%;flex:1;display:flex;flex-direction:column;gap:1px">
-<div style="flex:22;background:var(--teal);border-radius:3px 3px 0 0;min-height:0"></div>
-<div style="flex:30;background:var(--orange);opacity:0.75;min-height:0"></div>
-<div style="flex:35;background:var(--amber);min-height:0"></div>
-<div style="flex:13;background:var(--dim);opacity:0.3;border-radius:0 0 3px 3px;min-height:0"></div>
-</div>
-<p style="font-size:0.65rem;color:var(--text);font-weight:600;margin-top:0.5vh">Festival</p>
-</div>
-</div>
-<!-- Legend -->
-<div style="display:flex;gap:2vw;margin-top:1vh">
-<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:var(--teal)"></div><p style="font-size:0.62rem;color:var(--dim)">"On it"</p></div>
-<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:var(--orange);opacity:0.7"></div><p style="font-size:0.62rem;color:var(--dim)">"Heard of it"</p></div>
-<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:var(--amber)"></div><p style="font-size:0.62rem;color:var(--dim)">"What's PrEP?"</p></div>
-<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:var(--dim);opacity:0.3"></div><p style="font-size:0.62rem;color:var(--dim)">Prefer not to say</p></div>
-</div>
-</div>
-
-<div style="height:1px;background:rgba(76,48,13,0.1);margin:1.5vh 0 1vh"></div>
-<p style="font-size:0.82rem;color:var(--dim)">The people who knew the least are the ones we're moving the most.</p>
-</div>
-</div>
-
-<!-- ==================== SLIDE 18: MARKETING INTELLIGENCE ==================== -->
-<div class="slide" data-slide="18">
+<!-- ==================== SLIDE: TRACKING ROI ==================== -->
+<div class="slide slide-top" data-slide="18" style="padding-top:8vh">
 <div class="stagger">
 <p class="label orange">SCALE</p>
 <div class="gap-sm"></div>
-<h2>every event is a field study.</h2>
-<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.8vh;max-width:none;white-space:nowrap">Real-time market intelligence, fed directly into Gilead's expansion strategy.</p>
-<div class="gap-lg"></div>
-<div class="g3" style="gap:2.5vw;align-items:start">
-<div class="card" style="border-top:4px solid var(--orange);height:100%">
-<h3 style="font-size:1.1rem;margin-bottom:0.6vh">Who's in the room</h3>
-<div style="height:3px;width:30px;background:var(--orange);margin-bottom:1.5vh"></div>
-<p style="font-size:0.95rem;color:var(--muted);line-height:1.65">Lagged surveys tell you what happened last year. The kiosk captures PrEP awareness from real people at the point of cultural contact. Zip by zip, event by event.</p>
-<div style="margin-top:2vh;padding:1.2vw;background:rgba(232,133,58,0.06);border-radius:8px">
-<p style="font-size:0.82rem;color:var(--dim);line-height:1.5">At HCP conferences and community events, optional identity-level data (race, gender, age) shows where the gap is widest inside each room.</p>
-</div>
-</div>
-<div class="card" style="border-top:4px solid var(--teal);height:100%">
-<h3 style="font-size:1.1rem;margin-bottom:0.6vh">What's not working</h3>
-<div style="height:3px;width:30px;background:var(--teal);margin-bottom:1.5vh"></div>
-<p style="font-size:0.95rem;color:var(--muted);line-height:1.65">Some markets you assumed were a fit won't be. Freddie NYC might be saturated. A conference might be reaching the wrong providers. The kiosk shows you the mismatches before you double down.</p>
-</div>
-<div class="card" style="border-top:4px solid var(--orange);height:100%">
-<h3 style="font-size:1.1rem;margin-bottom:0.6vh">Where to go next</h3>
-<div style="height:3px;width:30px;background:var(--orange);margin-bottom:1.5vh"></div>
-<p style="font-size:0.95rem;color:var(--muted);line-height:1.65">Audience composition, awareness distribution, engagement patterns. They add up to a map of where the next activation should be. Expansion stops being a guess.</p>
-</div>
-</div>
+<h2>tracking roi</h2>
+<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">Four metrics per event. Each one feeds back into product and strategy.</p>
+<div class="gap"></div>
+<table class="legal-table" style="max-width:100%">
+<thead><tr><th>Metric</th><th>Impact</th></tr></thead>
+<tbody>
+<tr>
+<td style="color:var(--teal)">Awareness lift</td>
+<td>% of kiosk users who moved from "what's PrEP" to "heard of it" or higher. Proof the experience itself moves the needle.</td>
+</tr>
+<tr>
+<td style="color:var(--orange)">Morning text click-through</td>
+<td>% of opted-in users who tap through to resources the next day, by PrEP answer. Tells us which audiences respond to which messages.</td>
+</tr>
+<tr>
+<td style="color:var(--teal)">Completion rate</td>
+<td>% of users who finish the full flow, by PrEP answer. Shows where the product is and isn't working for each audience.</td>
+</tr>
+<tr>
+<td style="color:var(--orange)">Resource follow-through</td>
+<td>% of click-throughs that lead to a real action: a Freddie visit, a provider search, a PrEP resource. The hardest and most defensible number.</td>
+</tr>
+</tbody>
+</table>
+<div style="height:1px;background:rgba(76,48,13,0.1);margin:3vh 0 2vh"></div>
+<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);line-height:1.6;max-width:60ch">The audiences who knew the least are the ones we're moving the most. That's the product working, and the data telling us where to push next.</p>
 </div>
 </div>
 
-<!-- ==================== SLIDE 19: THE DASHBOARD ==================== -->
-<div class="slide" data-slide="19">
+<!-- ==================== SLIDE: STRATEGIC INTELLIGENCE ==================== -->
+<div class="slide slide-top" data-slide="19" style="padding-top:8vh">
+<div class="stagger">
+<p class="label orange">SCALE</p>
+<div class="gap-sm"></div>
+<h2>strategic intelligence</h2>
+<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">Real-time market intelligence, fed directly into Gilead's expansion strategy.</p>
+<div class="gap"></div>
+<table class="legal-table" style="max-width:100%">
+<thead><tr><th>Insight</th><th>Impact</th></tr></thead>
+<tbody>
+<tr>
+<td style="color:var(--orange)">Who's in the room</td>
+<td>Lagged surveys tell you what happened last year. The kiosk captures PrEP awareness from real people at the point of cultural contact, zip by zip, event by event. At HCP conferences and community events, optional identity-level data (race, gender, age) shows where the gap is widest inside each room.</td>
+</tr>
+<tr>
+<td style="color:var(--teal)">What's not working</td>
+<td>Some markets you assumed were a fit won't be. Freddie NYC might be saturated. A conference might be reaching the wrong providers. The kiosk shows you the mismatches before you double down.</td>
+</tr>
+<tr>
+<td style="color:var(--orange)">Where to go next</td>
+<td>Audience composition, awareness distribution, engagement patterns. They add up to a map of where the next activation should be. Expansion stops being a guess.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- ==================== SLIDE: ALL IN ONE PLACE ==================== -->
+<div class="slide" data-slide="20" style="padding:4vh 6vw 3vh">
 <div class="stagger">
 <p class="label orange">SCALE</p>
 <div class="gap-sm"></div>
 <h2>all in one place.</h2>
-<p style="font-size:clamp(0.95rem,1.15vw,1.15rem);color:var(--muted);margin-top:0.8vh;white-space:nowrap">One dashboard. Every event, every metric, every insight.</p>
-<div class="gap"></div>
-<div style="width:100%;height:55vh;border:2px dashed var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(76,48,13,0.02)">
-<p style="font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--dim);opacity:0.4;text-transform:uppercase;letter-spacing:0.12em">[DASHBOARD GIF, TO BE ADDED]</p>
+<p style="font-size:clamp(1rem,1.2vw,1.2rem);color:var(--muted);margin-top:0.3vh;white-space:nowrap">One dashboard. Every event, every metric, every insight.</p>
 </div>
-<div style="height:1px;background:rgba(76,48,13,0.1);margin:2vh 0 1.5vh"></div>
-<p style="font-size:0.9rem;color:var(--dim);line-height:1.5">This isn't a request to fund activations. It's a request to fund the instrument that tells you which ones work.</p>
+<div style="height:1vh"></div>
+<!-- DASHBOARD CONTAINER -->
+<div id="dash-container" style="flex:1;background:var(--surface-light);border:1.5px solid var(--border);border-radius:14px;padding:2vw 2.5vw;overflow:hidden;display:flex;flex-direction:column;gap:1.5vh">
+
+<!-- TOP: US MAP -->
+<div style="flex:1;position:relative;min-height:0">
+<p style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.5vh">National overview</p>
+<div style="position:relative;width:100%;height:100%;background:rgba(76,48,13,0.02);border-radius:8px;overflow:hidden">
+<!-- Simplified US outline -->
+<svg viewBox="0 0 960 600" style="width:100%;height:100%;opacity:0.08" preserveAspectRatio="xMidYMid meet"><path d="M 150 300 Q 200 100 480 120 Q 700 80 850 200 Q 900 350 800 400 Q 650 500 400 480 Q 200 460 150 300 Z" fill="var(--text)" stroke="none"/></svg>
+<!-- City dots -->
+<div class="dash-dot" style="left:78%;top:35%;--dot-color:var(--orange);--dot-size:14px;animation-delay:0.2s"></div>
+<div class="dash-dot" style="left:82%;top:28%;--dot-color:var(--orange);--dot-size:12px;animation-delay:0.4s"></div>
+<div class="dash-dot" style="left:18%;top:52%;--dot-color:var(--orange);--dot-size:16px;animation-delay:0.6s"></div>
+<div class="dash-dot" style="left:22%;top:48%;--dot-color:var(--teal);--dot-size:10px;animation-delay:0.8s"></div>
+<div class="dash-dot" style="left:68%;top:58%;--dot-color:var(--orange);--dot-size:13px;animation-delay:1.0s"></div>
+<div class="dash-dot" style="left:55%;top:30%;--dot-color:var(--teal);--dot-size:11px;animation-delay:1.2s"></div>
+<div class="dash-dot" style="left:72%;top:65%;--dot-color:var(--amber);--dot-size:10px;animation-delay:1.4s"></div>
+<div class="dash-dot" style="left:75%;top:42%;--dot-color:var(--teal);--dot-size:9px;animation-delay:1.6s"></div>
+<div class="dash-dot" style="left:40%;top:55%;--dot-color:var(--amber);--dot-size:8px;animation-delay:1.8s"></div>
+<div class="dash-dot" style="left:32%;top:62%;--dot-color:var(--dim);--dot-size:9px;animation-delay:2.0s"></div>
+<!-- Legend -->
+<div style="position:absolute;bottom:6px;right:10px;display:flex;gap:1vw">
+<div style="display:flex;align-items:center;gap:3px"><div style="width:6px;height:6px;border-radius:50%;background:var(--orange)"></div><p style="font-size:0.5rem;color:var(--dim)">Consumer</p></div>
+<div style="display:flex;align-items:center;gap:3px"><div style="width:6px;height:6px;border-radius:50%;background:var(--teal)"></div><p style="font-size:0.5rem;color:var(--dim)">HCP</p></div>
+<div style="display:flex;align-items:center;gap:3px"><div style="width:6px;height:6px;border-radius:50%;background:var(--amber)"></div><p style="font-size:0.5rem;color:var(--dim)">Community</p></div>
+</div>
 </div>
 </div>
 
-<!-- ==================== SLIDE 20: PRODUCT CUSTOMIZATION ==================== -->
-<div class="slide slide-top" data-slide="20" style="padding-top:6vh">
+<!-- MIDDLE: STACKED BARS -->
+<div>
+<p style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--dim);font-weight:600;margin-bottom:0.5vh">Awareness distribution by event</p>
+<div style="display:flex;gap:0.8vw;align-items:flex-end;height:8vh">
+<div style="flex:1;display:flex;flex-direction:column;gap:1px;height:100%"><div style="flex:42;background:var(--teal);border-radius:2px 2px 0 0;min-height:0"></div><div style="flex:31;background:var(--orange);opacity:0.7;min-height:0"></div><div style="flex:18;background:var(--amber);min-height:0"></div><div style="flex:9;background:var(--dim);opacity:0.25;border-radius:0 0 2px 2px;min-height:0"></div><p style="font-size:0.5rem;color:var(--dim);text-align:center;margin-top:2px">Freddie NYC</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px;height:100%"><div style="flex:38;background:var(--teal);border-radius:2px 2px 0 0;min-height:0"></div><div style="flex:28;background:var(--orange);opacity:0.7;min-height:0"></div><div style="flex:22;background:var(--amber);min-height:0"></div><div style="flex:12;background:var(--dim);opacity:0.25;border-radius:0 0 2px 2px;min-height:0"></div><p style="font-size:0.5rem;color:var(--dim);text-align:center;margin-top:2px">Freddie LA</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px;height:100%"><div style="flex:68;background:var(--teal);border-radius:2px 2px 0 0;min-height:0"></div><div style="flex:20;background:var(--orange);opacity:0.7;min-height:0"></div><div style="flex:8;background:var(--amber);min-height:0"></div><div style="flex:4;background:var(--dim);opacity:0.25;border-radius:0 0 2px 2px;min-height:0"></div><p style="font-size:0.5rem;color:var(--dim);text-align:center;margin-top:2px">IDWeek ATL</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px;height:100%"><div style="flex:35;background:var(--teal);border-radius:2px 2px 0 0;min-height:0"></div><div style="flex:28;background:var(--orange);opacity:0.7;min-height:0"></div><div style="flex:25;background:var(--amber);min-height:0"></div><div style="flex:12;background:var(--dim);opacity:0.25;border-radius:0 0 2px 2px;min-height:0"></div><p style="font-size:0.5rem;color:var(--dim);text-align:center;margin-top:2px">AIDS Walk SF</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px;height:100%"><div style="flex:30;background:var(--teal);border-radius:2px 2px 0 0;min-height:0"></div><div style="flex:25;background:var(--orange);opacity:0.7;min-height:0"></div><div style="flex:32;background:var(--amber);min-height:0"></div><div style="flex:13;background:var(--dim);opacity:0.25;border-radius:0 0 2px 2px;min-height:0"></div><p style="font-size:0.5rem;color:var(--dim);text-align:center;margin-top:2px">Pride MIA</p></div>
+</div>
+</div>
+
+<!-- BOTTOM: KPI ROW -->
+<div style="display:flex;gap:1.5vw">
+<div class="dash-kpi" style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;text-align:center">
+<p class="dash-num" data-end="34" style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--teal);line-height:1">+34%</p>
+<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Awareness lift</p>
+</div>
+<div class="dash-kpi" style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;text-align:center">
+<p class="dash-num" data-end="52" style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--orange);line-height:1">52%</p>
+<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Morning text CTR</p>
+</div>
+<div class="dash-kpi" style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;text-align:center">
+<p class="dash-num" data-end="87" style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--teal);line-height:1">87%</p>
+<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Completion rate</p>
+</div>
+<div class="dash-kpi" style="flex:1;background:rgba(76,48,13,0.03);border-radius:8px;padding:1vw 1.2vw;text-align:center">
+<p class="dash-num" data-end="19" style="font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.5vw,2.5rem);color:var(--orange);line-height:1">19%</p>
+<p style="font-size:0.55rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3vh">Follow-through</p>
+</div>
+</div>
+
+</div>
+<div style="height:1px;background:rgba(76,48,13,0.1);margin:1vh 0 0.5vh"></div>
+<p style="font-size:0.85rem;color:var(--dim)">This isn't a request to fund activations. It's a request to fund the instrument that tells you which ones work.</p>
+</div>
+
+<!-- ==================== SLIDE 21: PRODUCT CUSTOMIZATION ==================== -->
+<div class="slide slide-top" data-slide="21" style="padding-top:6vh">
 <div class="stagger">
 <p class="label orange">SCALE</p>
 <div class="gap-sm"></div>
@@ -911,8 +843,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 21: SECTION, THE BACKEND ==================== -->
-<div class="slide section-divider divider-amber" data-slide="21" style="padding:0">
+<!-- ==================== SLIDE 22: SECTION, THE BACKEND ==================== -->
+<div class="slide section-divider divider-amber" data-slide="22" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num">04</p>
@@ -921,8 +853,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 22: HOW DATA MOVES ==================== -->
-<div class="slide slide-top" data-slide="22" id="data-moves-slide">
+<!-- ==================== SLIDE 23: HOW DATA MOVES ==================== -->
+<div class="slide slide-top" data-slide="23" id="data-moves-slide">
 <div class="stagger">
 <p class="label amber">SYSTEM</p>
 <div class="gap-sm"></div>
@@ -1027,8 +959,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 23: METHODOLOGY + DATA BOUNDARIES ==================== -->
-<div class="slide slide-top" data-slide="23">
+<!-- ==================== SLIDE 24: METHODOLOGY + DATA BOUNDARIES ==================== -->
+<div class="slide slide-top" data-slide="24">
 <div class="stagger">
 <p class="label teal">METHODOLOGY</p>
 <div class="gap-sm"></div>
@@ -1053,37 +985,11 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <p style="font-size:0.95rem;color:var(--muted);line-height:1.55">PrEP rate per 100K divided by new diagnosis rate per 100K. Direct division of two published AIDSVu numbers. Shown inside the data card for each borough.</p>
 </div>
 </div>
-<!-- divider -->
-<div style="height:1px;background:rgba(76,48,13,0.1);margin:2.5vh 0"></div>
-<!-- data boundaries -->
-<div class="g2" style="gap:3vw">
-<div>
-<h3 style="margin-bottom:1.2vh;font-size:1.05rem">What We're Working With</h3>
-<ul style="font-size:0.95rem;color:var(--muted);line-height:1.9;padding-left:1.2em">
-<li>AIDSVu national PrEP totals (2012–2023)</li>
-<li>County-level HIV prevalence per 100K</li>
-<li>County-level PrEP coverage per 100K</li>
-<li>County-level new diagnoses per 100K</li>
-<li>Gap ratio (PrEP ÷ new diagnoses)</li>
-<li>Breakdowns by race, sex, age, transmission</li>
-</ul>
-</div>
-<div>
-<h3 style="margin-bottom:1.2vh;font-size:1.05rem">What We Don't Claim</h3>
-<ul style="font-size:0.95rem;color:var(--muted);line-height:1.9;padding-left:1.2em">
-<li>We do not use individual-level data</li>
-<li>We do not use predictive modeling</li>
-<li>We make no clinical outcome claims</li>
-<li>We use no AI-generated estimates</li>
-<li>We have no precision beyond county level</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 
-<!-- ==================== SLIDE 24: SECTION, LEGAL ==================== -->
-<div class="slide section-divider divider-amber" data-slide="24" style="padding:0">
+<!-- ==================== SLIDE 25: SECTION, LEGAL ==================== -->
+<div class="slide section-divider divider-amber" data-slide="25" style="padding:0">
 <div style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:12vh 8vw">
 <div class="stagger">
 <p class="section-num">05</p>
@@ -1092,8 +998,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 25: LEGAL, DATA ==================== -->
-<div class="slide" data-slide="25">
+<!-- ==================== SLIDE 26: LEGAL, DATA ==================== -->
+<div class="slide" data-slide="26">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1122,8 +1028,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 26: LEGAL, PRIVACY ==================== -->
-<div class="slide slide-top" data-slide="26">
+<!-- ==================== SLIDE 27: LEGAL, PRIVACY ==================== -->
+<div class="slide slide-top" data-slide="27">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1168,8 +1074,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 27: RETENTION + CLAIMS ==================== -->
-<div class="slide" data-slide="27">
+<!-- ==================== SLIDE 28: RETENTION + CLAIMS ==================== -->
+<div class="slide" data-slide="28">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1199,8 +1105,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 28: OPT-IN / OPT-OUT LANGUAGE ==================== -->
-<div class="slide slide-top" data-slide="28" style="padding-top:6vh;padding-bottom:4vh">
+<!-- ==================== SLIDE 29: OPT-IN / OPT-OUT LANGUAGE ==================== -->
+<div class="slide slide-top" data-slide="29" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1237,8 +1143,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 29: RISK MITIGATION ==================== -->
-<div class="slide slide-top" data-slide="29" style="padding-top:6vh;padding-bottom:4vh">
+<!-- ==================== SLIDE 30: RISK MITIGATION ==================== -->
+<div class="slide slide-top" data-slide="30" style="padding-top:6vh;padding-bottom:4vh">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1282,8 +1188,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 30: TERMS OF SERVICE ==================== -->
-<div class="slide slide-top" data-slide="30" style="padding-top:6vh">
+<!-- ==================== SLIDE 31: TERMS OF SERVICE ==================== -->
+<div class="slide slide-top" data-slide="31" style="padding-top:6vh">
 <div class="stagger">
 <p class="label amber">LEGAL</p>
 <div class="gap-sm"></div>
@@ -1325,8 +1231,8 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 </div>
 </div>
 
-<!-- ==================== SLIDE 31: THANK YOU ==================== -->
-<div class="slide" data-slide="31" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
+<!-- ==================== SLIDE 32: THANK YOU ==================== -->
+<div class="slide" data-slide="32" data-dark="true" style="background:var(--darkbrown);justify-content:center;align-items:flex-start;padding:12vh 8vw">
 <div class="stagger">
 <h1 style="font-size:clamp(5rem,10vw,10rem);color:var(--lime);line-height:0.95">Thank<br>You.</h1>
 <div style="height:6vh"></div>
@@ -1340,7 +1246,7 @@ p,.body{font-size:clamp(1.15rem,1.45vw,1.45rem);line-height:1.7;color:var(--mute
 <button class="nav-btn" onclick="navigate(-1)">&#8592;</button>
 <button class="nav-btn" onclick="navigate(1)">&#8594;</button>
 </div>
-<div class="counter" id="counter">1 / 32</div>
+<div class="counter" id="counter">1 / 33</div>
 
 <script>
 (function(){
