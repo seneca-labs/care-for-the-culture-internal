@@ -15,8 +15,8 @@ const outputPath = path.resolve(__dirname, 'care-for-the-culture-deck.pdf');
   await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
   await page.goto(htmlPath, { waitUntil: 'networkidle0', timeout: 30000 });
 
-  // Wait for GIFs/images to load
-  await new Promise(r => setTimeout(r, 3000));
+  // Wait for GIFs/images to load (longer for GIF first frames)
+  await new Promise(r => setTimeout(r, 5000));
 
   const total = await page.evaluate(() => document.querySelectorAll('.slide').length);
   console.log(`Found ${total} slides`);
@@ -72,12 +72,42 @@ const outputPath = path.resolve(__dirname, 'care-for-the-culture-deck.pdf');
 
     // Force any remaining inline opacity:0 elements
     document.querySelectorAll('[style*="opacity: 0"], [style*="opacity:0"]').forEach(el => {
-      // Don't force the flow bracket — we'll handle that separately
       if (el.id !== 'flow-bracket') {
         el.style.opacity = '1';
         el.style.transform = 'translateY(0)';
       }
     });
+
+    // Force animated bars to full width
+    document.querySelectorAll('.anim-bar').forEach(el => {
+      const w = getComputedStyle(el).getPropertyValue('--bar-w');
+      if (w) el.style.width = w;
+    });
+
+    // Force anim-card, anim-num, anim-ring visible
+    document.querySelectorAll('.anim-card').forEach(el => {
+      el.style.opacity = '1'; el.style.transform = 'scale(1)';
+    });
+    document.querySelectorAll('.anim-num').forEach(el => {
+      el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+    });
+    document.querySelectorAll('.anim-ring').forEach(el => {
+      const offset = getComputedStyle(el).getPropertyValue('--ring-offset');
+      if (offset) el.style.strokeDashoffset = offset;
+    });
+
+    // Force approach slide cards visible
+    const commonCard = document.getElementById('common-card');
+    const ourCard = document.getElementById('our-card');
+    const approachClosing = document.getElementById('approach-closing');
+    if (commonCard) { commonCard.style.opacity = '0.45'; commonCard.style.transform = 'translateY(0)'; commonCard.style.filter = 'grayscale(0.6)'; }
+    if (ourCard) { ourCard.style.opacity = '1'; ourCard.style.transform = 'translateY(0)'; }
+    if (approachClosing) { approachClosing.style.opacity = '1'; }
+
+    // Force dashboard views visible
+    document.querySelectorAll('.dash-view-a').forEach(el => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+    document.querySelectorAll('.dash-view-b').forEach(el => { el.style.opacity = '0'; });
+    document.querySelectorAll('.dash-dot').forEach(el => { el.style.opacity = '0.85'; el.style.transform = 'scale(1)'; });
 
     // Highlight the flow rows
     ['jr-3','jr-4','jr-5'].forEach(id => {
@@ -107,7 +137,7 @@ const outputPath = path.resolve(__dirname, 'care-for-the-culture-deck.pdf');
   });
 
   // Extra wait for everything to settle
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, 2000));
 
   await page.pdf({
     path: outputPath,
